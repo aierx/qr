@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation="http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+    <jaxrs:server id="rs">
+        <jaxrs:serviceBeans>
+            <ref bean="userService"/>
+        </jaxrs:serviceBeans>
+        <!--    序列化    -->
+        <jaxrs:providers>
+            <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
+            <bean class="com.aierx.boot.exception.ValidationExceptionMapper"/>
+        </jaxrs:providers>
+        <!--    参数校验    -->
+        <jaxrs:features>
+            <bean class="org.apache.cxf.validation.BeanValidationFeature"/>
+            <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>
+<!--            <bean class="org.apache.cxf.jaxrs.client.validation.JAXRSClientBeanValidationFeature"/>-->
+        </jaxrs:features>
+    </jaxrs:server>
+</beans>
