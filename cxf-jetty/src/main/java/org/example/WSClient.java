@@ -1,9 +1,8 @@
-package org.example.rs;
+package org.example;
 
 import org.apache.cxf.feature.LoggingFeature;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
-import org.example.rs.service.rs.IUserService;
-import org.example.rs.service.ws.IUserWebService;
+import org.example.service.ws.IUserWebService;
 
 import java.util.Collections;
 

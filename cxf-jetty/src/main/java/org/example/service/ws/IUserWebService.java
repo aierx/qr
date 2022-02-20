@@ -1,6 +1,6 @@
-package org.example.rs.service.ws;
+package org.example.service.ws;
 
-import org.example.rs.model.User;
+import org.example.model.User;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

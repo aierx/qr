@@ -1,10 +1,10 @@
-package org.example.rs;
+package org.example;
 
 import org.apache.cxf.feature.LoggingFeature;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
-import org.example.rs.service.rs.UserService;
-import org.example.rs.service.ws.UserWebService;
+import org.example.service.rs.UserService;
+import org.example.service.ws.UserWebService;
 
 import java.util.Collections;
 

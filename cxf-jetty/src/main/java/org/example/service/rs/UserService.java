@@ -1,7 +1,7 @@
-package org.example.rs.service.rs;
+package org.example.service.rs;
 
 
-import org.example.rs.model.User;
+import org.example.model.User;
 
 public class UserService  implements IUserService{
 

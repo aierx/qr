@@ -1,4 +1,4 @@
-package org.example.rs.model;
+package org.example.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
