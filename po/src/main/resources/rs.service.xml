@@ -8,6 +8,11 @@
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
+    <bean id="swagger2" class="org.apache.cxf.jaxrs.swagger.Swagger2Feature">
+        <property name="basePath" value="/cxf/swaggerSample"/>
+        <property name="resourcePackage" value="com.aierx.boot"/>
+    </bean>
+
     <jaxrs:server id="rs">
         <jaxrs:serviceBeans>
             <ref bean="userService"/>
@@ -19,9 +24,10 @@
         </jaxrs:providers>
         <!--    参数校验    -->
         <jaxrs:features>
+            <bean class="org.apache.cxf.jaxrs.swagger.Swagger2Feature"/>
             <bean class="org.apache.cxf.validation.BeanValidationFeature"/>
-            <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>
-<!--            <bean class="org.apache.cxf.jaxrs.client.validation.JAXRSClientBeanValidationFeature"/>-->
+<!--            <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>-->
+            <ref bean="swagger2"/>
         </jaxrs:features>
     </jaxrs:server>
 </beans>
