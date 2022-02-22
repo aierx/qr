@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 
 import static org.springframework.data.redis.cache.RedisCacheConfiguration.defaultCacheConfig;
 
-@Configuration
+
 public class CacheConfig extends CachingConfigurerSupport {
 
     @Resource
