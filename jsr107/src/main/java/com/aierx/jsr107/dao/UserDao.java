@@ -8,4 +8,6 @@ public interface UserDao {
     public User findUserById(int id);
 
     void updateUser(User user);
+
+    public User selectUserByResult(int id);
 }

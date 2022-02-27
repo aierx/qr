@@ -22,10 +22,78 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.aierx.jsr107.dao.UserDao">
+    <!--  嵌套查询  -->
     <update id="updateUser">
-        update db_user set username = #{username} where id =#{id}
+        update db_user
+        set username = #{username}
+        where id = #{id}
     </update>
-    <select id="findUserById" resultType="com.aierx.jsr107.model.po.User">
-        select * from db_user where id =#{id}
+
+    <select id="findUserById" resultMap="UserAll">
+        select *
+        from db_user
+        where id = #{id}
+    </select>
+
+    <resultMap id="UserAll" type="com.aierx.jsr107.model.po.User">
+        <id property="id" column="password" javaType="int"/>
+        <collection property="userDetails" column="id" select="findUserDetailById"/>
+    </resultMap>
+
+    <select id="findUserDetailById" resultMap="UserDetailAll">
+        select *
+        from db_user_detail
+        where user_id = #{id}
+    </select>
+
+    <resultMap id="UserDetailAll" type="com.aierx.jsr107.model.po.UserDetail">
+        <collection property="userDetailDescs" column="id" select="findUserDetailDescbyId"/>
+    </resultMap>
+
+    <select id="findUserDetailDescbyId" resultType="com.aierx.jsr107.model.po.UserDetailDesc">
+        select *
+        from db_user_detail_desc
+        where user_detail_id = #{1}
+    </select>
+    <!--  嵌套结果  -->
+    <resultMap id="userResultAll" type="com.aierx.jsr107.model.po.User">
+        <id property="id" column="t1_id"/>
+        <result property="version" column="t1_version"/>
+        <result property="status" column="t1_status"/>
+        <result property="reviewer" column="t1_reviewer"/>
+        <result property="username" column="t1_username"/>
+        <result property="password" column="t1_password"/>
+        <collection property="userDetails" resultMap="userResultDetailAll"/>
+    </resultMap>
+    <resultMap id="userResultDetailAll" type="com.aierx.jsr107.model.po.UserDetail">
+        <id property="id" column="t2_id"/>
+        <result property="userId" column="t2_user_id"/>
+        <result property="desc" column="t2_desc"/>
+        <collection property="userDetailDescs" ofType="com.aierx.jsr107.model.po.UserDetailDesc">
+            <id property="id" column="t3_id"/>
+            <result property="userDetailId" column="t3_userDetailId"/>
+            <result property="desc" column="t3_desc"/>
+        </collection>
+    </resultMap>
+    <select id="selectUserByResult" resultMap="userResultAll">
+        SELECT
+            t1.id as t1_id,
+            t1.username as t1_username,
+            t1.password as t1_password,
+            t1.version as t1_version,
+            t1.status as t1_status,
+            t1.reviewer as t1_reviewer ,
+            t2.id as t2_id,
+            t2.user_id as t2_user_id,
+            t2.desc as t2_desc,
+            t3.id as t3_id,
+            t3.user_detail_id as t3_userDetailId,
+            t3.desc as `t3_desc`
+        FROM
+            db_user t1
+                LEFT JOIN db_user_detail t2 ON t1.id = t2.user_id
+                LEFT JOIN db_user_detail_desc t3 on t2.id = t3.user_detail_id
+        WHERE
+            t1.id = 1
     </select>
 </mapper>

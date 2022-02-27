@@ -13,7 +13,7 @@
         <property name="resourcePackage" value="com.aierx.boot"/>
     </bean>
 
-    <jaxrs:server id="rs">
+    <jaxrs:server id="rs" address="/">
         <jaxrs:serviceBeans>
             <ref bean="userService"/>
         </jaxrs:serviceBeans>
@@ -26,7 +26,7 @@
         <jaxrs:features>
             <bean class="org.apache.cxf.jaxrs.swagger.Swagger2Feature"/>
             <bean class="org.apache.cxf.validation.BeanValidationFeature"/>
-<!--            <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>-->
+            <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>
             <ref bean="swagger2"/>
         </jaxrs:features>
     </jaxrs:server>
