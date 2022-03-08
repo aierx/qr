@@ -12,7 +12,7 @@
         <property name="basePath" value="/cxf/swaggerSample"/>
         <property name="resourcePackage" value="com.aierx.boot"/>
     </bean>
-
+    <bean id="cors-filter" class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
     <jaxrs:server id="rs" address="/">
         <jaxrs:serviceBeans>
             <ref bean="userService"/>
@@ -21,6 +21,7 @@
         <jaxrs:providers>
             <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
             <bean class="com.aierx.boot.exception.ValidationExceptionMapper"/>
+            <ref bean="cors-filter" />
         </jaxrs:providers>
         <!--    参数校验    -->
         <jaxrs:features>

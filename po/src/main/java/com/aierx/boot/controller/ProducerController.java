@@ -19,9 +19,8 @@ public class ProducerController {
     @GetMapping("produce")
     public String send(String msg){
         GenericMessage<UserPO> userPOGenericMessage = new GenericMessage<>(new UserPO("asdada", "asdadsad"));
-        userPOGenericMessage.
-        kafkaTemplate.send(userPOGenericMessage);
-//        kafkaTemplate.send("demo",msg);
+//        kafkaTemplate.send(userPOGenericMessage);
+        kafkaTemplate.send("demo",msg);
         return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
     }
 }

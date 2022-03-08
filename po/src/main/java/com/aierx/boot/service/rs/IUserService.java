@@ -11,7 +11,7 @@ import javax.ws.rs.*;
 public interface IUserService {
     @GET()
     @Path("/user")
-    UserPO getUser();
+    UserPO getUser(@QueryParam("id")int id);
 
     @POST
     @Path("/user")
