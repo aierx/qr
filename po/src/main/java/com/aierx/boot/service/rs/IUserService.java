@@ -1,13 +1,13 @@
 package com.aierx.boot.service.rs;
 
 import com.aierx.boot.model.po.UserPO;
-import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
 import javax.ws.rs.*;
 
 @Produces("application/json")
 @Consumes("application/json")
+@Path("/serere")
 public interface IUserService {
     @GET()
     @Path("/user")

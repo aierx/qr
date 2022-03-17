@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.aierx.elasticsearch.dao.CountrylanguageMapper">
+  <resultMap id="BaseResultMap" type="icu.aierx.elasticsearch.model.po.Countrylanguage">
+    <!--@mbg.generated-->
+    <!--@Table countrylanguage-->
+    <id column="CountryCode" jdbcType="CHAR" property="countrycode" />
+    <id column="Language" jdbcType="CHAR" property="language" />
+    <result column="IsOfficial" jdbcType="OTHER" property="isofficial" />
+    <result column="Percentage" jdbcType="DECIMAL" property="percentage" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    CountryCode, `Language`, IsOfficial, Percentage
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from countrylanguage
+    where CountryCode = #{countrycode,jdbcType=CHAR}
+      and `Language` = #{language,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    <!--@mbg.generated-->
+    delete from countrylanguage
+    where CountryCode = #{countrycode,jdbcType=CHAR}
+      and `Language` = #{language,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="icu.aierx.elasticsearch.model.po.Countrylanguage">
+    <!--@mbg.generated-->
+    insert into countrylanguage (CountryCode, `Language`, IsOfficial, 
+      Percentage)
+    values (#{countrycode,jdbcType=CHAR}, #{language,jdbcType=CHAR}, #{isofficial,jdbcType=OTHER}, 
+      #{percentage,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="icu.aierx.elasticsearch.model.po.Countrylanguage">
+    <!--@mbg.generated-->
+    insert into countrylanguage
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="countrycode != null">
+        CountryCode,
+      </if>
+      <if test="language != null">
+        `Language`,
+      </if>
+      <if test="isofficial != null">
+        IsOfficial,
+      </if>
+      <if test="percentage != null">
+        Percentage,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="countrycode != null">
+        #{countrycode,jdbcType=CHAR},
+      </if>
+      <if test="language != null">
+        #{language,jdbcType=CHAR},
+      </if>
+      <if test="isofficial != null">
+        #{isofficial,jdbcType=OTHER},
+      </if>
+      <if test="percentage != null">
+        #{percentage,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="icu.aierx.elasticsearch.model.po.Countrylanguage">
+    <!--@mbg.generated-->
+    update countrylanguage
+    <set>
+      <if test="isofficial != null">
+        IsOfficial = #{isofficial,jdbcType=OTHER},
+      </if>
+      <if test="percentage != null">
+        Percentage = #{percentage,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where CountryCode = #{countrycode,jdbcType=CHAR}
+      and `Language` = #{language,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="icu.aierx.elasticsearch.model.po.Countrylanguage">
+    <!--@mbg.generated-->
+    update countrylanguage
+    set IsOfficial = #{isofficial,jdbcType=OTHER},
+      Percentage = #{percentage,jdbcType=DECIMAL}
+    where CountryCode = #{countrycode,jdbcType=CHAR}
+      and `Language` = #{language,jdbcType=CHAR}
+  </update>
+</mapper>
