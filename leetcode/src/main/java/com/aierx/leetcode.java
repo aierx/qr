@@ -1,8 +1,16 @@
 package com.aierx;
 
+import com.google.common.util.concurrent.RateLimiter;
 import org.junit.Test;
+import org.springframework.web.client.RestTemplate;
 
+import java.lang.instrument.Instrumentation;
 import java.util.*;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.IntStream;
 
 public class leetcode {
     public static void main(String[] args) throws Exception {
@@ -557,22 +565,6 @@ public class leetcode {
     }
 
 
-    @Test
-    public void taest1() {
-        TreeNode treeNode = new TreeNode(10);
-        TreeNode treeNode1 = new TreeNode(5);
-        TreeNode treeNode2 = new TreeNode(15);
-        TreeNode treeNode3 = new TreeNode(3);
-        TreeNode treeNode4 = new TreeNode(7);
-        TreeNode treeNode5 = new TreeNode(18);
-        treeNode.left = treeNode1;
-        treeNode.right=treeNode2;
-        treeNode1.left=treeNode3;
-        treeNode1.right=treeNode4;
-        treeNode2.right = treeNode5;
-        int i = rangeSumBST(treeNode, 7, 15);
-
-    }
 
     public boolean checkIfPangram(String sentence) {
         char[] chars = sentence.toCharArray();
@@ -586,4 +578,298 @@ public class leetcode {
         }
         return true;
     }
+
+    public int hammingDistance(int x, int y) {
+        int i = Integer.bitCount(x^y);
+        return i;
+    }
+
+
+    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String s : word1) {
+            stringBuilder.append(s);
+        }
+
+        StringBuilder stringBuilder1 = new StringBuilder();
+        for (String s : word2) {
+            stringBuilder1.append(s);
+        }
+        return stringBuilder.toString().equals(stringBuilder1.toString());
+    }
+
+
+    public int countPairs(int[] nums, int k) {
+        int res=0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int i1 = i+1; i1 < nums.length; i1++) {
+                if (nums[i]==nums[i1]&&(i*i1)%k==0)res++;
+            }
+        }
+        return res;
+    }
+
+    public int getDecimalValue(ListNode head) {
+        int res = 0;
+        while (head!=null){
+            res*=2;
+            res+=head.val;
+            head=head.next;
+        }
+        return res;
+    }
+
+    public int countPoints(String rings) {
+        char[] chars = rings.toCharArray();
+        int temp;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < chars.length; i+=2) {
+            Integer integer = map.get(chars[i+1]-48)!=null?map.get(chars[i+1]-48):0;
+            if (chars[i]=='R'){
+                temp = integer|1;
+                map.put(chars[i+1]-48,temp);
+            }
+            if (chars[i]=='B'){
+                temp = integer|2;
+                map.put(chars[i+1]-48,temp);
+            }
+            if (chars[i]=='G'){
+                temp = integer|4;
+                map.put(chars[i+1]-48,temp);
+            }
+        }
+
+        int res = 0;
+        for (Integer integer : map.keySet()) {
+            if(map.get(integer)==7)res++;
+        }
+
+        return res;
+    }
+
+    public int findNumbers(int[] nums) {
+        int res = 0;
+        for (int num : nums) {
+           if( String.valueOf(num).length()%2==0)res++;
+        }
+        return res;
+    }
+    public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
+        int res=0;
+        for (int i = 0; i < startTime.length; i++) {
+            if(queryTime>=startTime[i]&&queryTime<=endTime[i])res++;
+        }
+        return res;
+    }
+
+    public int diagonalSum(int[][] mat) {
+        int res=0;
+        for (int i = 0; i < mat.length; i++) {
+            res +=mat[i][i];
+            res+=mat[i][mat.length-i];
+        }
+        if ((mat.length)%2==1){
+            int temp = mat.length/2;
+            res-=mat[temp][temp];
+        }
+        return res;
+    }
+
+    public int calculate(String s) {
+        int x = 1;
+        int y = 0;
+        char[] chars = s.toCharArray();
+        for (char aChar : chars) {
+            if (aChar=='A'){
+                x = 2*x+y;
+            }else {
+                y=2*y+x;
+            }
+        }
+
+        return x+y;
+    }
+
+    public int sumBase(int n, int k) {
+        int res = 0;
+        while (n>=k){
+           res+= n/k;
+           n=n%k;
+        }
+        return res+n;
+    }
+
+    public boolean winnerOfGame(String colors) {
+        int a = 0;
+        int b = 0;
+        char[] chars = colors.toCharArray();
+        for (int i = 1; i < chars.length-1; i++) {
+            if (chars[i-1]=='A'&&chars[i]=='A'&&chars[i+1]=='A')a++;
+            if (chars[i-1]=='B'&&chars[i]=='B'&&chars[i+1]=='B')b++;
+        }
+
+
+        return (a-1)>b;
+    }
+    List<Integer> list = new ArrayList<>();
+    boolean temp = false;
+    public boolean findTarget(TreeNode root, int k) {
+        if(root==null)return temp;
+        if(list.contains(root.val)) temp = true;;
+        list.add(k-root.val);
+        findTarget(root.left,k);
+        findTarget(root.right,k);
+        return true;
+    }
+
+
+
+    public int findKthNumber(int n, int k) {
+        int cuee = 1;
+        k--;
+        while (k>0){
+            int step = getstep(cuee,n);
+            if (step<k){
+                k-=step;
+                cuee++;
+            }else {
+                cuee*=10;
+                k--;
+            }
+        }
+        return cuee;
+    }
+
+    private int getstep(int cuee, int n) {
+        int step = 0;
+        long fisrt = cuee;
+        long fast = cuee;
+        while (fisrt<=n){
+            step+=Math.max(fast,n)-fisrt+1;
+            fisrt=fisrt*10;
+            fast = fast*10+9;
+        }
+        return step;
+    }
+
+    StringBuilder builder = new StringBuilder();
+    public String tree2str(TreeNode root) {
+        if(root==null)return "";
+        builder.append(root.val);
+        if(root.right!=null){
+            builder.append("(");
+            tree2str(root.left);
+            tree2str(root.right);
+            builder.append(")");
+        }else {
+            tree2str(root.left);
+            tree2str(root.right);
+        }
+
+        return builder.toString();
+    }
+
+
+    public String longestWord(String[] words) {
+        ArrayList<String> strings = new ArrayList<>();
+        for (String word : words) {
+            strings.add(word);
+        }
+        strings.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o2.length()-o1.length();
+            }
+        });
+        ArrayList<String> strings1 = new ArrayList<>();
+        for (String string : strings) {
+            int tem = string.length();
+            for (int i = 0; i < string.length(); i++) {
+                String substring = string.substring(0, string.length() - i - 1);
+                if(!strings.contains(substring))break;
+                tem--;
+            }
+            if (tem==1){
+                strings1.add(string);
+            }
+        }
+        ArrayList<String> res = new ArrayList<>();
+        int max = strings1.get(0).length();
+        for (String s : strings1) {
+            if (s.length()==max){
+                res.add(s);
+            }
+        }
+        for (int i = 0; i < res.get(0).length(); i++) {
+            int min = 0;
+        }
+        return  "aaaaa";
+    }
+
+    public String reversePrefix(String word, char ch) {
+        Stack<Character> characters = new Stack<>();
+        char[] chars = word.toCharArray();
+        int i = 0;
+        while (ch!=chars[i]){
+            characters.push(chars[i]);
+            i++;
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        characters.push(chars[i++]);
+        while (characters.size()!=0){
+            stringBuilder.append(characters.pop());
+        }
+        while (i<word.length()){
+            stringBuilder.append(chars[i]);
+            i++;
+        }
+        return stringBuilder.toString();
+
+    }
+
+    public String firstPalindrome(String[] words) {
+        for (String word : words) {
+            char[] chars = word.toCharArray();
+            for (int i = 0; i < chars.length; i++) {
+                if (i==chars.length/2)return word;
+                if (chars[i]==chars[chars.length-i-1])continue;
+                else break;
+            }
+        }
+        return "";
+    }
+    public int[][] flipAndInvertImage(int[][] image) {
+        for (int i = 0; i < image.length; i++) {
+            for (int i1 = 0; i1 < image[i].length; i1++) {
+                if (image[i][i1]==1)image[i][i1]=0;
+                else image[i][i1]=1;
+            }
+            for (int i1 = 0; i1 < image[i].length/2; i1++) {
+                int temp = image[i][i1];
+                image[i][i1] = image[i][image[i].length-i1-1];
+                image[i][image[i].length-i1-1] = temp;
+            }
+        }
+        return image;
+    }
+
+    public String replaceDigits(String s) {
+        StringBuilder stringBuilder = new StringBuilder();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            stringBuilder.append(chars[i]);
+            i++;
+            if(i<chars.length){
+                stringBuilder.append((char)(chars[i-1]+chars[i]-48));
+            }
+        }
+
+        return stringBuilder.toString();
+    }
+    @Test
+    public void taest1() throws InterruptedException {
+        replaceDigits(
+                "a1b2c3d4e");
+    }
+
 }
