@@ -10,6 +10,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class leetcode {
@@ -866,10 +867,111 @@ public class leetcode {
 
         return stringBuilder.toString();
     }
+    HashSet<Integer> integers = new HashSet<>();
+
+    public int numColor(TreeNode root) {
+        if (root==null)return 0;
+        integers.add(root.val);
+        numColor(root.left);
+        numColor(root.right);
+        return integers.size();
+    }
+
+    int max = 0;
+    public int maxDepth(TreeNode root) {
+        deep(root,1);
+        return max;
+
+    }
+
+    void deep(TreeNode rot,int high){
+        if (rot==null)return;
+        if (high>max)max=high;
+        deep(rot.left,high+1);
+        deep(rot.right,high+1);
+    }
+
+
+    public int[][] imageSmoother(int[][] img) {
+       int[][] arr = new int[img.length][img[0].length];
+
+        for (int i = 0; i < arr.length; i++) {
+            int temp = 0;
+            int count = 0;
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i-1>0&&j-1>0) {
+                    temp+=img[i-1][j-1];
+                    count++;
+                }
+                if (i-1>0) {
+                    temp+=img[i-1][j];
+                    count++;
+                }
+                if(i-1>0&&j+1<arr[i].length) {
+                    temp+=img[i-1][j+1];
+                    count++;
+                }
+
+                if (j+1<arr[i].length) {
+                    temp+=img[i][j+1];
+                    count++;
+                }
+                if(i+1<arr.length&&j+1<img[i].length) {
+                    temp+=img[i+1][j+1];
+                    count++;
+                }
+
+                if (i+1<arr.length) {
+                    temp+=img[i+1][j];
+                    count++;
+                }
+                if (j-1>0&&i+1<arr.length) {
+                    temp+=img[i+1][j-1];
+                    count++;
+                }
+                if (j-1>0) {
+                    temp+=img[i][j-1];
+                    count++;
+                }
+                temp+=img[i][j];
+                arr[i][j]= (int) Math.floor( temp/(count+1));
+            }
+        }
+        return arr;
+    }
+
+    int getAvg(int ...object){
+        int res = 0;
+        for (int i : object) {
+            res+=i;
+        }
+        return res/object.length;
+
+    }
+
+    public int sumOfUnique(int[] nums) {
+        if (nums.length==1)return nums[0];
+        ArrayList<Integer> a = new ArrayList<>();
+        for (int num : nums) {
+            a.add(num);
+        }
+        ArrayList<Integer> integers1 = new ArrayList<>();
+        for (int i = 1; i < a.size(); i++) {
+            if (a.get(i).equals(a.get(i - 1)))integers1.add(a.get(i));
+        }
+        int res = 0;
+        for (Integer integer : integers1) {
+            if (!integers1.contains(integer)){
+            }
+        }
+        return res;
+    }
+
     @Test
     public void taest1() throws InterruptedException {
-        replaceDigits(
-                "a1b2c3d4e");
+        int[][] a =  {{100,200,100},{200,50,200},{100,200,100}};
+        int[][] ints = imageSmoother(a);
+        System.out.println();
     }
 
 }
