@@ -119,6 +119,8 @@ public class RBTree<T extends Comparable> {
             }else {
                 y.right = node;
             }
+        }else {
+            this.mRoot = node;
         }
         node.color = RED;
         insertFixUp(node);
@@ -134,54 +136,8 @@ public class RBTree<T extends Comparable> {
     private void insertFixUp(RBTNode<T> node) {
         RBTNode<T> parent,gParent;
         // 若“父节点存在，并且父节点的颜色是红色”
-        while (((parent = parentOf(node))!=null)&&isRed(parent)){
-            gParent = parentOf(parent);
-            //若“父节点”是“祖父节点的左孩子”
-            if (parent == gParent.left){
-                // Case 1条件：叔叔节点是红色
-                RBTNode<T> uncle = gParent.right;
-                if ((uncle!=null)&&isRed(uncle)){
-                    setBlack(uncle);
-                    setBlack(parent);
-                    setRed(gParent);
-                    node = gParent;
-                    continue;
-                }
-                // Case 2条件：叔叔是黑色，且当前节点是右孩子
-                if (parent.right == node){
-                    RBTNode<T> tmp;
-                    leftRotate(parent);
-                    tmp = parent;
-                    parent = node;
-                    node = tmp;
-                }
-                // Case 3条件：叔叔是黑色，且当前节点是左孩子。
-                setBlack(parent);
-                setRed(gParent);
-                rightRotate(gParent);
-            }else { //若“node的父节点”是“node的祖父节点的右孩子”
-                // Case 4条件：叔叔节点是红色
-                RBTNode<T> uncle = gParent.left;
-                if ((uncle!=null) && isRed(uncle)) {
-                    setBlack(uncle);
-                    setBlack(parent);
-                    setRed(gParent);
-                    node = gParent;
-                    continue;
-                }
-                // Case 2条件：叔叔是黑色，且当前节点是左孩子
-                if (parent.left == node) {
-                    RBTNode<T> tmp;
-                    rightRotate(parent);
-                    tmp = parent;
-                    parent = node;
-                    node = tmp;
-                }
-                // Case 3条件：叔叔是黑色，且当前节点是右孩子。
-                setBlack(parent);
-                setRed(gParent);
-                leftRotate(gParent);
-            }
+        while ((parent = parentOf(node))!=null&&isRed(parent)){
+//            if (parent)
         }
         // 将根节点设为黑色
         setBlack(this.mRoot);

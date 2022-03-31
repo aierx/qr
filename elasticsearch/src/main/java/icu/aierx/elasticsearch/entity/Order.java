@@ -31,7 +31,8 @@ public class Order extends CommonEntity{
     private List<Good> goods;
 
     @OneToOne
-    @JoinColumn(name = "user",referencedColumnName = "userId")
+    @JoinColumn(name = "userId",referencedColumnName = "userId")
+    @Transient
     private User user;
 
 
