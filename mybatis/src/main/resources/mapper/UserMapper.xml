@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.aierx.mybatis.UserDao">
+    <sql id="allField">
+        user_id       as userId,
+        user_age      as userAge,
+        user_name     as userName,
+        user_password as userPassword
+    </sql>
+
+    <select id="findUserAll" resultType="icu.aierx.mybatis.User">
+        select user_id       as userId,
+               user_age      as userAge,
+               user_name     as userName,
+               user_password as userPassword
+        from jpa.db_user
+    </select>
+
+    <select id="findUserById" resultType="icu.aierx.mybatis.User">
+        select user_id as userId,
+        user_age as userAge,
+        user_name as userName,
+        user_password as userPassword
+        from jpa.db_user where user_id = #{id}
+    </select>
+
+    <insert id="insertUser">
+        insert into jpa.db_user (user_age,user_name,user_password) values(#{userAge},#{userName},#{userPassword})
+    </insert>
+
+    <delete id="deleteUser">
+        delete from jpa.db_user where user_id = #{userId}
+    </delete>
+
+    <update id="updateUser">
+        update jpa.db_user
+        set user_age = #{userAge},
+        user_name = #{userName},
+        user_password =#{userPassword} where user_id = #{userId}
+    </update>
+</mapper>

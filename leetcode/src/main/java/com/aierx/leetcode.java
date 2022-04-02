@@ -1,17 +1,8 @@
 package com.aierx;
 
-import com.google.common.util.concurrent.RateLimiter;
 import org.junit.Test;
-import org.springframework.web.client.RestTemplate;
 
-import java.lang.instrument.Instrumentation;
 import java.util.*;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class leetcode {
     public static void main(String[] args) throws Exception {
@@ -566,7 +557,6 @@ public class leetcode {
     }
 
 
-
     public boolean checkIfPangram(String sentence) {
         char[] chars = sentence.toCharArray();
         if (chars.length < 26) return false;
@@ -581,7 +571,7 @@ public class leetcode {
     }
 
     public int hammingDistance(int x, int y) {
-        int i = Integer.bitCount(x^y);
+        int i = Integer.bitCount(x ^ y);
         return i;
     }
 
@@ -601,10 +591,10 @@ public class leetcode {
 
 
     public int countPairs(int[] nums, int k) {
-        int res=0;
+        int res = 0;
         for (int i = 0; i < nums.length; i++) {
-            for (int i1 = i+1; i1 < nums.length; i1++) {
-                if (nums[i]==nums[i1]&&(i*i1)%k==0)res++;
+            for (int i1 = i + 1; i1 < nums.length; i1++) {
+                if (nums[i] == nums[i1] && (i * i1) % k == 0) res++;
             }
         }
         return res;
@@ -612,10 +602,10 @@ public class leetcode {
 
     public int getDecimalValue(ListNode head) {
         int res = 0;
-        while (head!=null){
-            res*=2;
-            res+=head.val;
-            head=head.next;
+        while (head != null) {
+            res *= 2;
+            res += head.val;
+            head = head.next;
         }
         return res;
     }
@@ -624,25 +614,25 @@ public class leetcode {
         char[] chars = rings.toCharArray();
         int temp;
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < chars.length; i+=2) {
-            Integer integer = map.get(chars[i+1]-48)!=null?map.get(chars[i+1]-48):0;
-            if (chars[i]=='R'){
-                temp = integer|1;
-                map.put(chars[i+1]-48,temp);
+        for (int i = 0; i < chars.length; i += 2) {
+            Integer integer = map.get(chars[i + 1] - 48) != null ? map.get(chars[i + 1] - 48) : 0;
+            if (chars[i] == 'R') {
+                temp = integer | 1;
+                map.put(chars[i + 1] - 48, temp);
             }
-            if (chars[i]=='B'){
-                temp = integer|2;
-                map.put(chars[i+1]-48,temp);
+            if (chars[i] == 'B') {
+                temp = integer | 2;
+                map.put(chars[i + 1] - 48, temp);
             }
-            if (chars[i]=='G'){
-                temp = integer|4;
-                map.put(chars[i+1]-48,temp);
+            if (chars[i] == 'G') {
+                temp = integer | 4;
+                map.put(chars[i + 1] - 48, temp);
             }
         }
 
         int res = 0;
         for (Integer integer : map.keySet()) {
-            if(map.get(integer)==7)res++;
+            if (map.get(integer) == 7) res++;
         }
 
         return res;
@@ -651,27 +641,28 @@ public class leetcode {
     public int findNumbers(int[] nums) {
         int res = 0;
         for (int num : nums) {
-           if( String.valueOf(num).length()%2==0)res++;
+            if (String.valueOf(num).length() % 2 == 0) res++;
         }
         return res;
     }
+
     public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
-        int res=0;
+        int res = 0;
         for (int i = 0; i < startTime.length; i++) {
-            if(queryTime>=startTime[i]&&queryTime<=endTime[i])res++;
+            if (queryTime >= startTime[i] && queryTime <= endTime[i]) res++;
         }
         return res;
     }
 
     public int diagonalSum(int[][] mat) {
-        int res=0;
+        int res = 0;
         for (int i = 0; i < mat.length; i++) {
-            res +=mat[i][i];
-            res+=mat[i][mat.length-i];
+            res += mat[i][i];
+            res += mat[i][mat.length - i];
         }
-        if ((mat.length)%2==1){
-            int temp = mat.length/2;
-            res-=mat[temp][temp];
+        if ((mat.length) % 2 == 1) {
+            int temp = mat.length / 2;
+            res -= mat[temp][temp];
         }
         return res;
     }
@@ -681,60 +672,62 @@ public class leetcode {
         int y = 0;
         char[] chars = s.toCharArray();
         for (char aChar : chars) {
-            if (aChar=='A'){
-                x = 2*x+y;
-            }else {
-                y=2*y+x;
+            if (aChar == 'A') {
+                x = 2 * x + y;
+            } else {
+                y = 2 * y + x;
             }
         }
 
-        return x+y;
+        return x + y;
     }
 
     public int sumBase(int n, int k) {
         int res = 0;
-        while (n>=k){
-           res+= n/k;
-           n=n%k;
+        while (n >= k) {
+            res += n / k;
+            n = n % k;
         }
-        return res+n;
+        return res + n;
     }
 
     public boolean winnerOfGame(String colors) {
         int a = 0;
         int b = 0;
         char[] chars = colors.toCharArray();
-        for (int i = 1; i < chars.length-1; i++) {
-            if (chars[i-1]=='A'&&chars[i]=='A'&&chars[i+1]=='A')a++;
-            if (chars[i-1]=='B'&&chars[i]=='B'&&chars[i+1]=='B')b++;
+        for (int i = 1; i < chars.length - 1; i++) {
+            if (chars[i - 1] == 'A' && chars[i] == 'A' && chars[i + 1] == 'A') a++;
+            if (chars[i - 1] == 'B' && chars[i] == 'B' && chars[i + 1] == 'B') b++;
         }
 
 
-        return (a-1)>b;
-    }
-    List<Integer> list = new ArrayList<>();
-    boolean temp = false;
-    public boolean findTarget(TreeNode root, int k) {
-        if(root==null)return temp;
-        if(list.contains(root.val)) temp = true;;
-        list.add(k-root.val);
-        findTarget(root.left,k);
-        findTarget(root.right,k);
-        return true;
+        return (a - 1) > b;
     }
 
+    List<Integer> list = new ArrayList<>();
+    boolean temp = false;
+
+    public boolean findTarget(TreeNode root, int k) {
+        if (root == null) return temp;
+        if (list.contains(root.val)) temp = true;
+        ;
+        list.add(k - root.val);
+        findTarget(root.left, k);
+        findTarget(root.right, k);
+        return true;
+    }
 
 
     public int findKthNumber(int n, int k) {
         int cuee = 1;
         k--;
-        while (k>0){
-            int step = getstep(cuee,n);
-            if (step<k){
-                k-=step;
+        while (k > 0) {
+            int step = getstep(cuee, n);
+            if (step < k) {
+                k -= step;
                 cuee++;
-            }else {
-                cuee*=10;
+            } else {
+                cuee *= 10;
                 k--;
             }
         }
@@ -745,24 +738,25 @@ public class leetcode {
         int step = 0;
         long fisrt = cuee;
         long fast = cuee;
-        while (fisrt<=n){
-            step+=Math.max(fast,n)-fisrt+1;
-            fisrt=fisrt*10;
-            fast = fast*10+9;
+        while (fisrt <= n) {
+            step += Math.max(fast, n) - fisrt + 1;
+            fisrt = fisrt * 10;
+            fast = fast * 10 + 9;
         }
         return step;
     }
 
     StringBuilder builder = new StringBuilder();
+
     public String tree2str(TreeNode root) {
-        if(root==null)return "";
+        if (root == null) return "";
         builder.append(root.val);
-        if(root.right!=null){
+        if (root.right != null) {
             builder.append("(");
             tree2str(root.left);
             tree2str(root.right);
             builder.append(")");
-        }else {
+        } else {
             tree2str(root.left);
             tree2str(root.right);
         }
@@ -779,7 +773,7 @@ public class leetcode {
         strings.sort(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                return o2.length()-o1.length();
+                return o2.length() - o1.length();
             }
         });
         ArrayList<String> strings1 = new ArrayList<>();
@@ -787,40 +781,40 @@ public class leetcode {
             int tem = string.length();
             for (int i = 0; i < string.length(); i++) {
                 String substring = string.substring(0, string.length() - i - 1);
-                if(!strings.contains(substring))break;
+                if (!strings.contains(substring)) break;
                 tem--;
             }
-            if (tem==1){
+            if (tem == 1) {
                 strings1.add(string);
             }
         }
         ArrayList<String> res = new ArrayList<>();
         int max = strings1.get(0).length();
         for (String s : strings1) {
-            if (s.length()==max){
+            if (s.length() == max) {
                 res.add(s);
             }
         }
         for (int i = 0; i < res.get(0).length(); i++) {
             int min = 0;
         }
-        return  "aaaaa";
+        return "aaaaa";
     }
 
     public String reversePrefix(String word, char ch) {
         Stack<Character> characters = new Stack<>();
         char[] chars = word.toCharArray();
         int i = 0;
-        while (ch!=chars[i]){
+        while (ch != chars[i]) {
             characters.push(chars[i]);
             i++;
         }
         StringBuilder stringBuilder = new StringBuilder();
         characters.push(chars[i++]);
-        while (characters.size()!=0){
+        while (characters.size() != 0) {
             stringBuilder.append(characters.pop());
         }
-        while (i<word.length()){
+        while (i < word.length()) {
             stringBuilder.append(chars[i]);
             i++;
         }
@@ -832,23 +826,24 @@ public class leetcode {
         for (String word : words) {
             char[] chars = word.toCharArray();
             for (int i = 0; i < chars.length; i++) {
-                if (i==chars.length/2)return word;
-                if (chars[i]==chars[chars.length-i-1])continue;
+                if (i == chars.length / 2) return word;
+                if (chars[i] == chars[chars.length - i - 1]) continue;
                 else break;
             }
         }
         return "";
     }
+
     public int[][] flipAndInvertImage(int[][] image) {
         for (int i = 0; i < image.length; i++) {
             for (int i1 = 0; i1 < image[i].length; i1++) {
-                if (image[i][i1]==1)image[i][i1]=0;
-                else image[i][i1]=1;
+                if (image[i][i1] == 1) image[i][i1] = 0;
+                else image[i][i1] = 1;
             }
-            for (int i1 = 0; i1 < image[i].length/2; i1++) {
+            for (int i1 = 0; i1 < image[i].length / 2; i1++) {
                 int temp = image[i][i1];
-                image[i][i1] = image[i][image[i].length-i1-1];
-                image[i][image[i].length-i1-1] = temp;
+                image[i][i1] = image[i][image[i].length - i1 - 1];
+                image[i][image[i].length - i1 - 1] = temp;
             }
         }
         return image;
@@ -860,17 +855,18 @@ public class leetcode {
         for (int i = 0; i < chars.length; i++) {
             stringBuilder.append(chars[i]);
             i++;
-            if(i<chars.length){
-                stringBuilder.append((char)(chars[i-1]+chars[i]-48));
+            if (i < chars.length) {
+                stringBuilder.append((char) (chars[i - 1] + chars[i] - 48));
             }
         }
 
         return stringBuilder.toString();
     }
+
     HashSet<Integer> integers = new HashSet<>();
 
     public int numColor(TreeNode root) {
-        if (root==null)return 0;
+        if (root == null) return 0;
         integers.add(root.val);
         numColor(root.left);
         numColor(root.right);
@@ -878,90 +874,91 @@ public class leetcode {
     }
 
     int max = 0;
+
     public int maxDepth(TreeNode root) {
-        deep(root,1);
+        deep(root, 1);
         return max;
 
     }
 
-    void deep(TreeNode rot,int high){
-        if (rot==null)return;
-        if (high>max)max=high;
-        deep(rot.left,high+1);
-        deep(rot.right,high+1);
+    void deep(TreeNode rot, int high) {
+        if (rot == null) return;
+        if (high > max) max = high;
+        deep(rot.left, high + 1);
+        deep(rot.right, high + 1);
     }
 
 
     public int[][] imageSmoother(int[][] img) {
-       int[][] arr = new int[img.length][img[0].length];
+        int[][] arr = new int[img.length][img[0].length];
 
         for (int i = 0; i < arr.length; i++) {
             int temp = 0;
             int count = 0;
             for (int j = 0; j < arr[i].length; j++) {
-                if (i-1>0&&j-1>0) {
-                    temp+=img[i-1][j-1];
+                if (i - 1 > 0 && j - 1 > 0) {
+                    temp += img[i - 1][j - 1];
                     count++;
                 }
-                if (i-1>0) {
-                    temp+=img[i-1][j];
+                if (i - 1 > 0) {
+                    temp += img[i - 1][j];
                     count++;
                 }
-                if(i-1>0&&j+1<arr[i].length) {
-                    temp+=img[i-1][j+1];
-                    count++;
-                }
-
-                if (j+1<arr[i].length) {
-                    temp+=img[i][j+1];
-                    count++;
-                }
-                if(i+1<arr.length&&j+1<img[i].length) {
-                    temp+=img[i+1][j+1];
+                if (i - 1 > 0 && j + 1 < arr[i].length) {
+                    temp += img[i - 1][j + 1];
                     count++;
                 }
 
-                if (i+1<arr.length) {
-                    temp+=img[i+1][j];
+                if (j + 1 < arr[i].length) {
+                    temp += img[i][j + 1];
                     count++;
                 }
-                if (j-1>0&&i+1<arr.length) {
-                    temp+=img[i+1][j-1];
+                if (i + 1 < arr.length && j + 1 < img[i].length) {
+                    temp += img[i + 1][j + 1];
                     count++;
                 }
-                if (j-1>0) {
-                    temp+=img[i][j-1];
+
+                if (i + 1 < arr.length) {
+                    temp += img[i + 1][j];
                     count++;
                 }
-                temp+=img[i][j];
-                arr[i][j]= (int) Math.floor( temp/(count+1));
+                if (j - 1 > 0 && i + 1 < arr.length) {
+                    temp += img[i + 1][j - 1];
+                    count++;
+                }
+                if (j - 1 > 0) {
+                    temp += img[i][j - 1];
+                    count++;
+                }
+                temp += img[i][j];
+                arr[i][j] = (int) Math.floor(temp / (count + 1));
             }
         }
         return arr;
     }
 
-    int getAvg(int ...object){
+    int getAvg(int... object) {
         int res = 0;
         for (int i : object) {
-            res+=i;
+            res += i;
         }
-        return res/object.length;
+        return res / object.length;
 
     }
 
     public int sumOfUnique(int[] nums) {
-        if (nums.length==1)return nums[0];
+        if (nums.length == 1) return nums[0];
         ArrayList<Integer> a = new ArrayList<>();
         for (int num : nums) {
             a.add(num);
         }
         ArrayList<Integer> integers1 = new ArrayList<>();
         for (int i = 1; i < a.size(); i++) {
-            if (a.get(i).equals(a.get(i - 1)))integers1.add(a.get(i));
+            if (a.get(i).equals(a.get(i - 1))) integers1.add(a.get(i));
         }
         int res = 0;
         for (Integer integer : integers1) {
-            if (!integers1.contains(integer)){
+            if (!integers1.contains(integer)) {
             }
         }
         return res;
@@ -969,9 +966,172 @@ public class leetcode {
 
     @Test
     public void taest1() throws InterruptedException {
-        int[][] a =  {{100,200,100},{200,50,200},{100,200,100}};
+        int[][] a = {{100, 200, 100}, {200, 50, 200}, {100, 200, 100}};
         int[][] ints = imageSmoother(a);
         System.out.println();
+    }
+
+    public ListNode getKthFromEnd(ListNode head, int k) {
+        ListNode h1 = head, h3 = head;
+        for (int i = 0; i < k; i++) {
+            h3 = h3.next;
+        }
+
+        while (h3 != null) {
+            h1 = h1.next;
+            h3 = h3.next;
+        }
+
+        return h1;
+    }
+
+    public TreeNode invertTree(TreeNode root) {
+        if (root != null) {
+            TreeNode temp = root.left;
+            root.left = root.right;
+            root.right = temp;
+            invertTree(root.left);
+            invertTree(root.right);
+        }
+        return root;
+    }
+
+    public int prefixCount(String[] words, String pref) {
+        int res = 0;
+        for (String word : words) {
+            if (word.startsWith(pref)) {
+                res++;
+            }
+        }
+        return res;
+    }
+
+    public String sortString(String s) {
+        int[] arr = new int[26];
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            arr[chars[i] - 97] += 1;
+        }
+        int flag = s.length();
+        StringBuilder res = new StringBuilder();
+        int count = 0;
+        while (flag > 0) {
+            while (count < 26) {
+                if (arr[count] > 0) {
+                    flag--;
+                    arr[count]--;
+                    res.append((char) (count + 97));
+                }
+                count++;
+            }
+            count--;
+            while (count >= 0) {
+                if (arr[count] > 0) {
+                    flag--;
+                    arr[count]--;
+                    res.append((char) (count + 97));
+                }
+                count--;
+            }
+            count++;
+        }
+        return res.toString();
+    }
+
+    public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
+        if (root1 == null) {
+            return root2;
+        }
+        if (root2 == null) {
+            return root1;
+        }
+        TreeNode node = new TreeNode(root1.val + root2.val);
+        node.left = mergeTrees(root1.left, root2.left);
+        node.right = mergeTrees(root1.right, root2.right);
+        return node;
+    }
+
+
+    public int minOperations(int[] nums) {
+        if (nums.length == 0 || nums.length == 1) return 0;
+        int res = 0;
+        int temp = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] <= temp) {
+                res = res + (temp - nums[i] + 1);
+                temp = temp + 1;
+            } else {
+                temp = nums[i];
+            }
+        }
+        return res;
+    }
+
+
+    public int largestAltitude(int[] gain) {
+        if (gain.length == 0) return 0;
+        if (gain.length == 1) return gain[0];
+
+        int max = gain[0];
+        int cur = gain[0];
+
+        for (int i : gain) {
+            cur += i;
+            if (cur > max) {
+                max = cur;
+            }
+        }
+
+        return max;
+    }
+
+    public String restoreString(String s, int[] indices) {
+        char[] chars = s.toCharArray();
+
+        for (int i = 0; i < indices.length; i++) {
+            int min = i;
+            for (int j = i; j < indices.length; j++) {
+                if (indices[j] < indices[min]) {
+                    min = j;
+                }
+            }
+            int temp = indices[min];
+            indices[min] = indices[i];
+            indices[i] = temp;
+
+            char tema = chars[min];
+            chars[min] = chars[i];
+            chars[i] = tema;
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char aChar : chars) {
+            stringBuilder.append(aChar);
+        }
+        return stringBuilder.toString();
+    }
+
+
+    public boolean squareIsWhite(String coordinates) {
+        char[] chars = coordinates.toCharArray();
+        char a = chars[0];
+        int c = a - 'a' + 1;
+        int d = chars[1] - '0';
+        return (c + d) % 2 != 0;
+    }
+
+    public int numOfStrings(String[] patterns, String word) {
+        int res = 0;
+        for (String pattern : patterns) {
+            if (word.contains(pattern)) {
+                res++;
+            }
+        }
+        return res;
+    }
+
+    @Test
+    public void aaa() {
+        int[] arr = new int[]{-10, -3, 0, 5, 9};
     }
 
 }
