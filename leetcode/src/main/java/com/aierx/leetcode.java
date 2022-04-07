@@ -1129,9 +1129,90 @@ public class leetcode {
         return res;
     }
 
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> res = new ArrayList();
+
+        for(int i = left ;i<=right;i++){
+            int flag = 0;
+            int temp =i;
+            while (temp>0){
+                int a = temp%10;
+                temp = temp/10;
+                if (a==0){
+                    flag=1;
+                    break;
+                }
+                if (i%a!=0){
+                    flag=1;
+                    break;
+                }
+            }
+            if (flag==0){
+                res.add(i);
+            }
+        }
+        return res;
+    }
+
+    public int minBitFlips(int start, int goal) {
+        int res=0;
+        while (start!=0||goal!=0) {
+            int a=start&1;
+            int b=goal&1;
+            if (a!=b) {
+                res++;
+            }
+            if(start!=0)
+                start=start>>>1;
+            if(goal!=0)
+                goal=goal>>>1;
+        }
+        return res;
+    }
+
+    public int[] replaceElements(int[] arr) {
+        int max = maxIndex(arr,1);
+        for (int i = 0; i < arr.length-1; i++) {
+            if (max>i){
+                arr[i] = arr[max];
+            }else {
+                max = maxIndex(arr,i+1);
+                arr[i] = arr[max];
+            }
+        }
+        arr[arr.length-1] = -1;
+        return  arr;
+    }
+
+    public int maxIndex(int[] arr,int begin){
+        int max = begin;
+
+        while (begin<arr.length){
+            if (arr[max]<arr[begin]){
+                max = begin;
+            }
+            begin++;
+        }
+        return max;
+    }
+
+    public int[] countBits(int n) {
+        int[] res = new int[n+1];
+        for (int i = 0; i < n+1; i++) {
+            int temp = i;
+            while (temp>0){
+                int c = temp&1;
+                if (c==1)res[i]++;
+                temp = temp>>>1;
+            }
+        }
+        return res;
+    }
+
     @Test
     public void aaa() {
-        int[] arr = new int[]{-10, -3, 0, 5, 9};
+        int[] arr = new int[]{17,18,5,4,6,1};
+        countBits(2);
     }
 
 }

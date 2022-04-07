@@ -30,6 +30,12 @@
             <artifactId>java-sizeof_2.11</artifactId>
             <version>0.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>3.3.0</version>
+        </dependency>
     </dependencies>
 
 </project>
