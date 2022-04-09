@@ -31,7 +31,6 @@ public class ASMTest implements Opcodes {
             System.out.println("aaaaaa");
         }
     }
-
 }
 
 
