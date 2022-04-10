@@ -9,8 +9,6 @@ import java.util.List;
 public interface PropertiesDao {
     List<PropertiesEntity> findAll();
 
-
-
     int deleteByPrimaryKey(Integer id);
 
     int insert(Properties record);
@@ -23,9 +21,6 @@ public interface PropertiesDao {
 
     int updateByPrimaryKey(Properties record);
 
-
     List<Properties> findAllById(@Param("id")Integer id);
-
-
 
 }
