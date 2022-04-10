@@ -1,6 +1,7 @@
 package com.aierx.config.environment;
 
 import com.aierx.config.entity.Properties;
+import com.aierx.config.entity.PropertiesDao;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.BeforeClass;

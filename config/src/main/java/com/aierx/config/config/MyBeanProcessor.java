@@ -1,4 +1,4 @@
-package com.aierx.config;
+package com.aierx.config.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

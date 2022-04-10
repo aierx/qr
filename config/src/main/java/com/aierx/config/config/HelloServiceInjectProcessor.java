@@ -1,4 +1,4 @@
-package com.aierx.config;
+package com.aierx.config.config;
 
 import com.aierx.config.beanProcessor.RountingInjected;
 import org.springframework.beans.BeansException;

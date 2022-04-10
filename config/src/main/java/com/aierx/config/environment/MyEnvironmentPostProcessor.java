@@ -1,5 +1,6 @@
 package com.aierx.config.environment;
 
+import com.aierx.config.entity.PropertiesDao;
 import lombok.SneakyThrows;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

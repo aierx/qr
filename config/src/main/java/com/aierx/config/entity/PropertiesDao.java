@@ -1,12 +1,13 @@
 package com.aierx.config.entity;
 
-import com.aierx.config.entity.Properties;
+import com.aierx.config.environment.PropertiesEntity;
+import org.apache.ibatis.annotations.Param;
 
-/**
- * @author leiwenyong
- * @since 2022/3/13
- */
-public interface PropertiesMapper {
+import java.util.List;
+
+public interface PropertiesDao {
+    List<PropertiesEntity> findAll();
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(Properties record);
@@ -18,4 +19,7 @@ public interface PropertiesMapper {
     int updateByPrimaryKeySelective(Properties record);
 
     int updateByPrimaryKey(Properties record);
+
+    List<Properties> findAllById(@Param("id")Integer id);
+
 }
