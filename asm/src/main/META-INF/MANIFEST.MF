@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Premain-Class: com.aierx.MyAgent
+Built-By: aleiwe
+Agent-Class: com.aierx.MyAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Class-Path: mybatis-3.5.9.jar asm-9.2.jar
+Created-By: Apache Maven 3.8.1
+Build-Jdk: 1.8.0_320
+leriwewewq: aaaaaaaaaaaaa
+

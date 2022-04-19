@@ -27,7 +27,7 @@
     </select>
 
     <insert id="insertUser">
-        insert into jpa.db_user (user_age,user_name,user_password) values(#{userAge},#{userName},#{userPassword})
+        insert into jpa.db_user (user_age,user_name,user_password,user_id) values(#{user.userAge},#{name},#{user.userPassword},#{user.userId})
     </insert>
 
     <delete id="deleteUser">

@@ -8,7 +8,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 /**
  * @author leiwenyong
@@ -18,13 +17,15 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) throws IOException {
-        log.error("hello world");
         InputStream inputStream = Resources.getResourceAsStream("mybatis.xml");
         SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         try (SqlSession sqlSession = sessionFactory.openSession()){
             UserDao mapper = sqlSession.getMapper(UserDao.class);
-            List<User> userAll = mapper.findUserAll();
+            User user = new User("1", "2", "3", "4");
+            mapper.findUserById(8);
         }
-        log.error("end。");
+    }
+    private void hello(){
+        System.out.println("我开始调用了");
     }
 }

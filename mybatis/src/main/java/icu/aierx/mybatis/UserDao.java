@@ -1,5 +1,7 @@
 package icu.aierx.mybatis;
 
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**
@@ -13,7 +15,7 @@ public interface UserDao {
     public User findUserById(int id);
 
 
-    public int insertUser(User user);
+    public int insertUser(@Param("user") User user,@Param("name") String name);
 
 
     public int deleteUser(User user);

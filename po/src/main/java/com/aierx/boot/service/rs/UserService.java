@@ -20,7 +20,8 @@ public class UserService implements IUserService {
     }
     @Override
     public UserPO getUser(int id){
-        return userPOS.get(id);
+        int c = 1/0;
+        return userPOS.get(c);
     }
 
     @Override

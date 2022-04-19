@@ -20,7 +20,8 @@
         <!--    序列化    -->
         <jaxrs:providers>
             <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
-            <bean class="com.aierx.boot.exception.ValidationExceptionMapper"/>
+            <bean class="com.aierx.boot.MyException"/>
+            <bean class="com.aierx.boot.MyException1"/>
             <ref bean="cors-filter" />
         </jaxrs:providers>
         <!--    参数校验    -->
