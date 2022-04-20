@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aierx.boot.dao.UserDao">
+    <insert id="insertUser">
+        insert into jpa.db_user (user_id, user_age, user_name, user_password)
+        VALUES (#{userId}, #{userAge}, #{userName}, #{userPassword})
+    </insert>
+    <update id="updateUserById">
+        update jpa.db_user
+        set user_age=#{userAge},
+            user_name=#{userName},
+            user_password=#{userPassword}
+        where user_id = #{userId}
+    </update>
+    <delete id="deleteUserById">
+        delete
+        from jpa.db_user
+        where user_id = #{userId}
+    </delete>
+    <select id="getUserById" resultType="com.aierx.boot.model.po.UserPO">
+        select user_id       as userId,
+               user_password as userPassword,
+               user_age      as userAge,
+               user_name     as userName
+        from jpa.db_user
+        where user_id = #{userId}
+    </select>
+</mapper>
