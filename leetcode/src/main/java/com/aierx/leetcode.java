@@ -2,15 +2,12 @@ package com.aierx;
 
 import org.junit.Test;
 
+import scala.Array;
+
 import java.util.*;
 
 public class leetcode {
-    public static void main(String[] args) throws Exception {
 
-        int[] a = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        Solution solution = new Solution();
-        solution.maxSubArray(a);
-    }
 
     private final int[] nums = new int[]{1, 3};
 
@@ -1209,10 +1206,34 @@ public class leetcode {
         return res;
     }
 
-    @Test
-    public void aaa() {
-        int[] arr = new int[]{17,18,5,4,6,1};
-        countBits(2);
+
+    public boolean checkTree(TreeNode root) {
+        if(root==null) return false;
+        int rootVal = root.val;
+        List<TreeNode> list = new ArrayList<TreeNode>();
+        int other = 0;
+        list.add(root);
+        while(list.size()>0){
+            TreeNode aa = list.get(0);
+            if(aa.left!=null){
+                list.add(aa.left);
+            }
+            if(aa.right!=null){
+                list.add(aa.right);
+            }
+            other+=aa.val;
+            list.remove(aa);
+        }
+        return other==(2*rootVal);
+    }
+
+
+    public static void main(String[] args) throws Exception {
+        String[] arr = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+
+
+
+        System.out.println(arr['a'-97]);
     }
 
 }

@@ -14,34 +14,28 @@ import java.util.List;
 public class UserService implements IUserService {
 
     @Autowired
-    IUserService userService;
-
-    @Autowired
     UserDao userDao;
 
     @Autowired
     OtherService otherService;
 
 
-
     @Override
     @Transactional
     public List<UserPO> getUser(String id){
-
+        ObjectMapper objectMapper = new ObjectMapper();
+        System.out.println("a");
         return userDao.getUserById(id);
     }
 
 
     public int UpdateUser(UserPO userPO) throws Exception {
-
-
         ObjectMapper objectMapper = new ObjectMapper();
 
         String s = objectMapper.writeValueAsString(userPO);
         System.out.println(s);
 
-
-        userService.otherFun4(userPO);
+//        userService.otherFun4(userPO);
         ((UserService) AopContext.currentProxy()).otherFun5(userPO);
         return 2;
     }

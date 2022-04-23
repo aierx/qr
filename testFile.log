@@ -1,0 +1,1672 @@
+245  [main] ERROR icu.aierx.mybatis.App - hello world
+212  [main] ERROR icu.aierx.mybatis.App - hello world
+17698 [main] ERROR icu.aierx.mybatis.App - end。
+161  [main] ERROR icu.aierx.mybatis.App - hello world
+470740 [main] ERROR icu.aierx.mybatis.App - end。
+187  [main] ERROR icu.aierx.mybatis.App - hello world
+1125 [main] ERROR icu.aierx.mybatis.App - end。
+144765 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:118)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:56)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:71)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+204  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+8376 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+47270 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+86109 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+88756 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+90705 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+91007 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+92319 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+92333 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+93671 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+93987 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+173  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+3247 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:50819
+3249 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+3249 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+3249 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+3249 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+3250 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+3252 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+3257 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:50819
+3257 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+3513 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:50821
+3513 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+3514 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+3514 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+3514 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+3514 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+3514 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+3516 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:50821
+3517 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+3760 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:50820
+7143 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+7143 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+7143 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+7144 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+7144 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+7144 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+7145 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:50820
+7145 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+7445 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:50824
+7445 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+7446 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+7446 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+7446 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+7446 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+7446 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+7448 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:50824
+7448 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5678800 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51494
+5678805 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5678807 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5678807 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5678807 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5678807 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5678808 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5678812 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51494
+5678813 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5679056 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51496
+5679057 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5679057 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5679057 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5679057 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5679057 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5679057 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5679059 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51496
+5679059 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5679306 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51495
+5709915 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5709915 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5709915 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5709915 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5709915 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5709915 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5709917 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51495
+5709917 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5722262 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51499
+5724085 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5724087 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5724089 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5724089 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5724089 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5762760 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5795941 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51499
+5796785 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5807356 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51501
+5807356 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5807356 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5807357 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5807357 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5807357 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5807357 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5807358 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51501
+5807359 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5810879 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51509
+5810879 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5810879 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5810879 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5810879 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5810879 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5810879 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5810879 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51509
+5810879 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5811970 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51510
+5823803 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5823804 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5823804 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5823804 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5823804 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5823804 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5823805 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51510
+5823805 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5829777 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51516
+5829777 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5829777 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5829777 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5829777 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5829777 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5829777 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5829777 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51516
+5829777 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5835289 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51524
+5835290 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5835290 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5835290 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5835291 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5835291 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5835291 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5835293 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51524
+5835294 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5838201 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51526
+5838201 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5838201 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5838201 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5838201 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5838201 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5838201 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5838203 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51526
+5838203 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5878765 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51554
+5878765 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5878765 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5878765 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5878765 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5878765 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5878766 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5878767 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51554
+5878767 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5888440 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51555
+5888440 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5888440 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5888440 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5888440 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5888440 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5888440 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5888440 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51555
+5888440 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5895238 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51574
+5895238 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5895238 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5895239 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5895239 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5895239 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5895239 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5895240 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51574
+5895240 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5896914 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51575
+5896914 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5896914 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5896914 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5896914 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5896914 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5896914 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5896929 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51575
+5896929 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5898212 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51578
+5902661 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5902662 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/
+5902662 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/
+5902662 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5902662 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5902662 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5902663 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51578
+5902663 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+5912531 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:51585
+5912531 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+5912531 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+5912531 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+5912531 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+5912531 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+5912531 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5912546 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:51585
+5912546 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+6720012 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52033
+6826102 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+6902244 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+6921760 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+6959147 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+6959147 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+6959147 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6959149 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52033
+6959149 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+6959887 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52034
+6959887 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+null
+6959887 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6959892 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:118)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:56)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:71)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+6960361 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52187
+6960361 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/favicon.ico
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+6960361 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+6960361 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+6960361 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+6960361 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+6960361 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6960376 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52187
+6960376 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+6960904 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52188
+6965088 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+6965088 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+6965088 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+6965089 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+6965089 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+6965089 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6965090 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52188
+6965090 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+6970840 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52196
+6970840 [main] DEBUG i.a.s.connector.HttpServletRequest - context=
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+sec-ch-ua-platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/favicon.ico
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+6970840 [main] DEBUG i.a.s.connector.HttpServletRequest - url=/favicon.ico
+6970840 [main] DEBUG i.a.s.connector.HttpServletRequest - uri=/favicon.ico
+6970840 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamsStr=
+6970840 [main] DEBUG i.a.s.connector.HttpServletRequest - requestParamMap={}
+6970840 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6970840 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52196
+6970840 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+203  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+14347 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52219
+73299 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+111098 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+124597 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+231733 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+236834 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52219
+237234 [main] DEBUG i.a.server.connector.HttpConnector - 
+
+272543 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52221
+272543 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+272558 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:118)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:56)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:71)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+141  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+3345 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52399
+3350 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+3350 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+3351 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+3353 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+3356 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52399
+3356 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52400
+3371 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+3371 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+3371 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+3371 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+3372 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52400
+3612 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52401
+4535 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+4535 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+4535 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+4535 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+4537 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52401
+4840 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52404
+4841 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+4841 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+4841 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+4842 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+4845 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52404
+5996 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52408
+5996 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+5997 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+5997 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+5997 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6001 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52408
+6001 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52409
+6028 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+6028 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+6028 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+6028 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6030 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52409
+6259 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52411
+6691 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+6692 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+6692 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+6692 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6693 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52411
+6996 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52413
+6996 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+6997 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+6997 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+6997 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6999 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52413
+7858 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52417
+7859 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+7859 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+7859 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+7860 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+7864 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52417
+7864 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52418
+7875 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+7876 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+7876 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+7876 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+7877 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52418
+8121 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52419
+8555 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+8555 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+8556 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+8556 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+8557 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52419
+8867 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52422
+8869 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+8869 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+8870 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+8870 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+8873 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52422
+9721 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52426
+9722 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+9722 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+9722 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+9723 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+9727 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52426
+9727 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52427
+9740 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+9740 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+9740 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+9741 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+9742 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52427
+9985 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52428
+10271 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+10271 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+10271 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+10271 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+10273 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52428
+10572 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52430
+10572 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+10572 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+10572 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+10573 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+10574 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52430
+11344 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52435
+11345 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+11345 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+11345 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+11345 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+11350 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52435
+11351 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52436
+11363 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+11363 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+11363 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+11363 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+11365 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52436
+11605 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52437
+14159 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+14159 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+14159 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+14159 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+14161 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52437
+14463 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52440
+14463 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+14463 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+14464 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+14464 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+14465 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52440
+17290 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52445
+17291 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+17291 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+17291 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+17291 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+17295 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52445
+17551 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52448
+17552 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+17552 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+17552 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+17552 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+17555 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52448
+17805 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52446
+18084 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+18084 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+18084 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+18084 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+18086 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52446
+18385 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52450
+18385 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+18386 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+18386 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+18386 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+18388 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52450
+19326 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52454
+19328 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+19328 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+19328 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+19329 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+19333 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52454
+19333 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52455
+19346 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+19346 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+19346 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+19346 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+19348 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52455
+19573 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52456
+20116 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+20116 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+20116 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+20116 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+20118 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52456
+20419 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52458
+20420 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+20420 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+20420 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+20420 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+20421 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52458
+21299 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52463
+21300 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+21300 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+21300 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+21300 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+21305 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52463
+21305 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52464
+21317 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+21317 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+21317 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+21317 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+21319 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52464
+21562 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52465
+22074 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+22075 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+22075 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+22075 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+22076 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52465
+22388 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52467
+22388 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+22389 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+22389 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+22389 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+22393 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52467
+23239 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52472
+23240 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+23240 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+23240 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+23240 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+23241 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52472
+23242 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52473
+23253 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+23253 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+23253 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+23253 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+23255 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52473
+23488 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52474
+24287 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+24287 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+24287 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+24287 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+24289 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52474
+24588 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52477
+24588 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+24588 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+24588 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+24589 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+24590 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52477
+28583 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52482
+28583 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+28583 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+28583 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+28583 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+28589 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52482
+28589 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52483
+28602 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+28602 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+28603 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+28603 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+28604 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52483
+28848 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52484
+41613 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+41613 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+41613 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+41613 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+41614 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52484
+41916 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52492
+41916 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+41916 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+41917 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+41917 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+41921 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52492
+55335 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52503
+55335 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+55335 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+55336 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+55336 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+55337 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52503
+55599 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52505
+55599 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+55599 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+55599 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+55599 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+55603 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52505
+55847 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52504
+57327 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+57327 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+57327 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+57327 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+57329 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52504
+57638 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52508
+57638 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+57638 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+57638 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+57638 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+57640 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52508
+58669 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52512
+58669 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+58669 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+58669 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+58669 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+58671 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52512
+58671 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52513
+58682 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+58682 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+58682 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+58682 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+58683 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52513
+58923 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52515
+126002 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+126007 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:118)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:56)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:71)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+147182 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52600
+147182 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+147183 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+147183 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+147183 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+147187 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52600
+147443 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52602
+147443 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+147443 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+147443 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+147443 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+147444 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52602
+147550 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52603
+153195 [main] DEBUG i.a.server.connector.HttpConnector - uri=/
+153195 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+153195 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+153195 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+153196 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52603
+153519 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52609
+153519 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+153519 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+153519 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+153519 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+153519 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52609
+153777 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52610
+161139 [main] DEBUG i.a.server.connector.HttpConnector - uri=/index
+161139 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+161140 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+161140 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+161141 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52610
+161474 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52617
+161474 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+161474 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+161474 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+161474 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+161474 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52617
+161733 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52619
+177866 [main] DEBUG i.a.server.connector.HttpConnector - uri=/index.html
+177866 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+177867 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+177867 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+177868 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52619
+178200 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52632
+178200 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+178200 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+178200 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+178200 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+178200 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52632
+178444 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52633
+280637 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+280637 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:118)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:56)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:71)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+280952 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52734
+280953 [main] DEBUG i.a.server.connector.HttpConnector - uri=/index.html
+280953 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+280953 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+280953 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+280954 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52734
+281205 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52736
+281206 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+281206 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+281206 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+281206 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+281209 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52736
+281269 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52737
+285738 [main] DEBUG i.a.server.connector.HttpConnector - uri=/index.html
+285738 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+285738 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+285739 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+285740 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52737
+286063 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52745
+286064 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+286064 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+286064 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+286064 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+286066 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52745
+286322 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52746
+172  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+3444 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52760
+3447 [main] DEBUG i.a.server.connector.HttpConnector - uri=/index.html
+3447 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+3448 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+10133 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+10139 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52760
+10140 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52762
+10150 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+10150 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+10150 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+101781 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+101797 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52762
+158  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+25111 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52838
+25116 [main] DEBUG i.a.server.connector.HttpConnector - uri=/index.html
+25116 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+25117 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+45246 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+45252 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52838
+45252 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52839
+45265 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+45266 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+45267 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+45911 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+45911 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52839
+54670 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52857
+54671 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index.html
+54671 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+54671 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+147679 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+147684 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52857
+147685 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52858
+150166 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+150166 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:118)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:56)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:71)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+150166 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52906
+150166 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+150166 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+150166 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+154446 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+154462 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52906
+154462 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52908
+156965 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index.html
+156966 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+156966 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+188609 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+188611 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52908
+188934 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52939
+188934 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+188934 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+188934 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+194005 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+194007 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52939
+194007 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52940
+194008 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+194008 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+194008 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+206639 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+206639 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+206642 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52940
+206972 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52953
+206972 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+206972 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+206972 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+211511 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+211511 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:52953
+211511 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:52954
+291119 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+291122 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:118)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:56)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:70)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+291123 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53005
+291124 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+291124 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+291124 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+291644 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+291651 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53005
+291652 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53008
+291662 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+291662 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+291662 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+292140 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+292145 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53008
+158  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+4353 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53199
+4356 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+4356 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+4356 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+9361 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+12843 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+14379 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53199
+14379 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53200
+14390 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+14390 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+14390 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+18089 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+18089 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53200
+51742 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53229
+51743 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+51743 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+51743 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+54166 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+54167 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53229
+54167 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53230
+54178 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+54179 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+54179 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+55215 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+55215 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53230
+203  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+2046 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53244
+2048 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+2048 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2049 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+3551 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+4381 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+4383 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53244
+4385 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53245
+4399 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+4400 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+4400 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+5601 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5601 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53245
+91741 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53331
+91742 [main] DEBUG i.a.server.connector.HttpConnector - uri=/rs/serere/user
+91742 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+91743 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+96974 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+96976 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53331
+96976 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:53333
+96992 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+96993 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+96993 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+97923 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+97923 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:53333
+172  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+10061 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54379
+10068 [main] DEBUG i.a.server.connector.HttpConnector - uri=/ser
+10068 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+10069 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+10070 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+10075 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54379
+10327 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54381
+10328 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+10328 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+10329 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+10329 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+10331 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54381
+10393 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54382
+28746 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+28747 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+28747 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+28747 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+28747 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+28748 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54382
+29067 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54396
+29068 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+29068 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+29068 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+29068 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+29072 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54396
+29329 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54397
+157  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+3978 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54424
+3980 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+3981 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+3981 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+5403 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+6409 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+7530 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54424
+7531 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54425
+7546 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+7547 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+7547 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+9131 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+9147 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54425
+11159 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54432
+11159 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+11160 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+11160 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+13596 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+55577 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54432
+55577 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54433
+55588 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+55589 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+55589 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+60936 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+60936 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54433
+156  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+5727 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54624
+5729 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+5729 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+5730 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+5732 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+5732 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+5732 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54624
+5994 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54626
+5994 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+5994 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+5994 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+5995 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+5999 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54626
+6055 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54627
+114  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+888  [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54662
+890  [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+890  [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+890  [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+891  [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+891  [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+892  [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54662
+1154 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54664
+1155 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+1155 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1155 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1155 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+1159 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54664
+1215 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54667
+126  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+2621 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54690
+2623 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+2623 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2623 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2625 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+2625 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+2625 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54690
+2886 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54692
+2886 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+2886 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2886 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2887 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+2890 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54692
+2948 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54693
+157  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+1714 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54714
+1716 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+1716 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1716 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1718 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+1718 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+1718 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54714
+1978 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54716
+1979 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+1979 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1981 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1981 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+1993 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:115)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:221)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:291)
+	at sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:295)
+	at sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:141)
+	at java.io.OutputStreamWriter.flush(OutputStreamWriter.java:229)
+	at java.io.BufferedWriter.flush(BufferedWriter.java:254)
+	at icu.aierx.server.Utils.copyInText(Utils.java:43)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:70)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+2040 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54717
+25430 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+25430 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+25430 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+25430 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+25431 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54717
+25753 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54736
+25754 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+25754 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+25754 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+25754 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+25759 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:115)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:221)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:291)
+	at sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:295)
+	at sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:141)
+	at java.io.OutputStreamWriter.flush(OutputStreamWriter.java:229)
+	at java.io.BufferedWriter.flush(BufferedWriter.java:254)
+	at icu.aierx.server.Utils.copyInText(Utils.java:43)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:70)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+26001 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54737
+110  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+1981 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54747
+1983 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+1983 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1984 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1985 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+1985 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+1986 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54747
+2245 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54748
+3038 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+3038 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+3038 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+3038 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+3038 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54748
+8372 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54754
+8373 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+8373 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+8373 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+8373 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+8374 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54754
+8619 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54755
+163  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+1795 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54768
+1798 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+1798 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1799 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1802 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+1803 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+27937 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54768
+27937 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54769
+156  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+2218 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54792
+2220 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+2220 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2220 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2223 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+2224 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+3524 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54792
+3525 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54793
+157  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+2316 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54811
+2321 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+2321 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2322 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2325 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+2325 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+6563 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54811
+6564 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54812
+6564 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+6564 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+6564 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+6564 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+6987 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54812
+7329 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54817
+7330 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+7331 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+7331 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+7332 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+18626 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54817
+18626 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54818
+187  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+1975 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54834
+1977 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+1977 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1978 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1985 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+1985 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+2818 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54834
+2819 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54835
+2831 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+2831 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2831 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2832 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+3444 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54835
+157  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+125  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+1775 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54892
+1777 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+1777 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1777 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1778 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+1778 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+1779 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54892
+2043 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54893
+140  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+2104 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54912
+2108 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+2108 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2109 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2111 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+2111 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+2111 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54912
+2372 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54913
+141  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+1785 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54929
+1787 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+1787 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+1788 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+1790 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+1790 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+1790 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54929
+2049 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54931
+2050 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+2050 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2050 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2051 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+2068 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54931
+2143 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54932
+121  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+2157 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54983
+2162 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+2162 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2162 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2163 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+2163 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+2164 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54983
+2424 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54985
+2425 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+2425 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2425 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2426 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+2445 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:54985
+2517 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:54986
+110  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+3250 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55015
+3252 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index
+3252 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+3253 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+3258 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+3262 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55015
+3517 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55017
+3518 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+3518 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+3518 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+3518 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+3521 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55017
+3593 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55018
+23767 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index.html
+23768 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+23768 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+23768 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+23768 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+23768 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55018
+24099 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55030
+24099 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+24099 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+24099 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+24099 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+24110 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55030
+24342 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55031
+31098 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index.html
+31098 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+31098 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+31098 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+31099 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55031
+31416 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55038
+31416 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+31416 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+31416 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+31416 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+31418 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55038
+31683 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55039
+111  [main] INFO  i.a.server.connector.HttpConnector - Server is starting, listener port 8080
+2543 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55073
+2545 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index.html
+2545 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2546 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2548 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet init
+2549 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+2549 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55073
+2810 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55075
+2810 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+2810 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9
+2810 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9}
+2811 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+2815 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55075
+2874 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55076
+6503 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+6512 [main] ERROR i.a.server.connector.HttpConnector - 
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at icu.aierx.server.connector.HttpServletResponse$CustomServletOutputStream.write(HttpServletResponse.java:117)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at icu.aierx.server.connector.HttpServletResponse.getOutputStream(HttpServletResponse.java:55)
+	at icu.aierx.example.servlet.DefaultHttpServlet.doGet(DefaultHttpServlet.java:23)
+	at icu.aierx.server.container.HttpServlet.service(HttpServlet.java:26)
+	at icu.aierx.server.container.HttpContainer.execute(HttpContainer.java:70)
+	at icu.aierx.server.connector.HttpConnector.process(HttpConnector.java:63)
+	at icu.aierx.server.connector.HttpConnector.startup(HttpConnector.java:42)
+	at icu.aierx.server.service.HttpService.startup(HttpService.java:20)
+	at icu.aierx.example.Main.main(Main.java:26)
+10016 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55122
+10017 [main] DEBUG i.a.server.connector.HttpConnector - uri=/servlet/index.html
+10017 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+10017 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9,en;q}
+10017 [main] INFO  i.a.e.servlet.IndexHttpServlet - IndexHttpServlet doGet
+10017 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55122
+10018 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55123
+10144 [main] DEBUG i.a.server.connector.HttpConnector - uri=/favicon.ico
+10144 [main] DEBUG i.a.server.connector.HttpConnector - requestParamsStr=Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+10144 [main] DEBUG i.a.server.connector.HttpConnector - requestParamMap={Accept-Language: zh-CN,zh;q=0.9,en;q}
+10144 [main] INFO  i.a.e.servlet.DefaultHttpServlet - DefaultHttpServlet doGet
+10150 [main] DEBUG i.a.server.connector.HttpConnector - responded to /127.0.0.1:55123
+10263 [main] DEBUG i.a.server.connector.HttpConnector - receive a request from /127.0.0.1:55126
