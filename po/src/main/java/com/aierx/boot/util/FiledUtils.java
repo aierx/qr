@@ -1,7 +1,4 @@
-package com.aierx.boot;
-
-import com.aierx.boot.model.po.UserPO;
-import com.fasterxml.jackson.core.JsonProcessingException;
+package com.aierx.boot.util;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -14,17 +11,7 @@ import java.util.List;
  * @author leiwenyong
  * @since 2022/4/20
  */
-public class Main {
-
-    public static void main(String[] args) throws JsonProcessingException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        UserPO userPO2 = new UserPO("456", "1", "1", "1");
-        UserPO userPO1 = new UserPO("123", "2", "1", "1");
-        ArrayList<String> list = new ArrayList<>();
-        list.add("userName");
-        HashMap<String, String> differentFields = differentFields(userPO1, userPO2, list);
-        System.out.println(differentFields);
-    }
-
+public class FiledUtils {
     public static HashMap<String, String> differentFields(Object newObject, Object oldObject, List<String> fields) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         HashMap<String, String> res = new HashMap<>();
         Class<?> clazz = newObject.getClass();
