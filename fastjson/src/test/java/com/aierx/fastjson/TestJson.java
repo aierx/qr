@@ -20,6 +20,9 @@ public class TestJson {
     public void TestJson1(){
         UserPO userPO = new UserPO("lei", "wen", "yong", "hao", "ya");
         BookPO bookPO = new BookPO("后裔");
+
+        String dir = System.getProperty("user.dir");
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles",true);
         userPO.setBookPO(bookPO);
         userPO.setDate(new Date());
         String s = JSON.toJSONString(userPO
