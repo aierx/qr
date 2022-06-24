@@ -2,8 +2,6 @@ package com.aierx;
 
 import org.junit.Test;
 
-import scala.Array;
-
 import java.util.*;
 
 public class leetcode {
@@ -1129,22 +1127,22 @@ public class leetcode {
     public List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> res = new ArrayList();
 
-        for(int i = left ;i<=right;i++){
+        for (int i = left; i <= right; i++) {
             int flag = 0;
-            int temp =i;
-            while (temp>0){
-                int a = temp%10;
-                temp = temp/10;
-                if (a==0){
-                    flag=1;
+            int temp = i;
+            while (temp > 0) {
+                int a = temp % 10;
+                temp = temp / 10;
+                if (a == 0) {
+                    flag = 1;
                     break;
                 }
-                if (i%a!=0){
-                    flag=1;
+                if (i % a != 0) {
+                    flag = 1;
                     break;
                 }
             }
-            if (flag==0){
+            if (flag == 0) {
                 res.add(i);
             }
         }
@@ -1152,40 +1150,40 @@ public class leetcode {
     }
 
     public int minBitFlips(int start, int goal) {
-        int res=0;
-        while (start!=0||goal!=0) {
-            int a=start&1;
-            int b=goal&1;
-            if (a!=b) {
+        int res = 0;
+        while (start != 0 || goal != 0) {
+            int a = start & 1;
+            int b = goal & 1;
+            if (a != b) {
                 res++;
             }
-            if(start!=0)
-                start=start>>>1;
-            if(goal!=0)
-                goal=goal>>>1;
+            if (start != 0)
+                start = start >>> 1;
+            if (goal != 0)
+                goal = goal >>> 1;
         }
         return res;
     }
 
     public int[] replaceElements(int[] arr) {
-        int max = maxIndex(arr,1);
-        for (int i = 0; i < arr.length-1; i++) {
-            if (max>i){
+        int max = maxIndex(arr, 1);
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (max > i) {
                 arr[i] = arr[max];
-            }else {
-                max = maxIndex(arr,i+1);
+            } else {
+                max = maxIndex(arr, i + 1);
                 arr[i] = arr[max];
             }
         }
-        arr[arr.length-1] = -1;
-        return  arr;
+        arr[arr.length - 1] = -1;
+        return arr;
     }
 
-    public int maxIndex(int[] arr,int begin){
+    public int maxIndex(int[] arr, int begin) {
         int max = begin;
 
-        while (begin<arr.length){
-            if (arr[max]<arr[begin]){
+        while (begin < arr.length) {
+            if (arr[max] < arr[begin]) {
                 max = begin;
             }
             begin++;
@@ -1194,13 +1192,13 @@ public class leetcode {
     }
 
     public int[] countBits(int n) {
-        int[] res = new int[n+1];
-        for (int i = 0; i < n+1; i++) {
+        int[] res = new int[n + 1];
+        for (int i = 0; i < n + 1; i++) {
             int temp = i;
-            while (temp>0){
-                int c = temp&1;
-                if (c==1)res[i]++;
-                temp = temp>>>1;
+            while (temp > 0) {
+                int c = temp & 1;
+                if (c == 1) res[i]++;
+                temp = temp >>> 1;
             }
         }
         return res;
@@ -1208,32 +1206,241 @@ public class leetcode {
 
 
     public boolean checkTree(TreeNode root) {
-        if(root==null) return false;
+        if (root == null) return false;
         int rootVal = root.val;
         List<TreeNode> list = new ArrayList<TreeNode>();
         int other = 0;
         list.add(root);
-        while(list.size()>0){
+        while (list.size() > 0) {
             TreeNode aa = list.get(0);
-            if(aa.left!=null){
+            if (aa.left != null) {
                 list.add(aa.left);
             }
-            if(aa.right!=null){
+            if (aa.right != null) {
                 list.add(aa.right);
             }
-            other+=aa.val;
+            other += aa.val;
             list.remove(aa);
         }
-        return other==(2*rootVal);
+        return other == (2 * rootVal);
+    }
+
+
+    public boolean isPalindrome(char[] x, int offset, int len) {
+        for (int i = 0; i < len / 2; i++) {
+            if (x[offset + i] != x[offset + len - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String longestPalindrome(String s) {
+        int len = s.length();
+        char[] chars = s.toCharArray();
+        if (s.length() < 2) return s;
+        boolean[][] booleans = new boolean[len][len];
+
+        int j, maxLen = 1, begin = 0;
+        for (int L = 2; L < len; L++) {
+            for (int i = 0; i < len; i++) {
+                j = L + i - 1;
+                if (j >= len) {
+                    break;
+                }
+                if (chars[i] != chars[j]) {
+                    booleans[i][j] = false;
+                } else {
+                    if (j - i < 3) {
+                        booleans[i][j] = true;
+                    } else {
+                        booleans[i][j] = booleans[i + 1][j - 1];
+                    }
+                }
+                if (booleans[i][j] && j - i + 1 > maxLen) {
+                }
+
+            }
+
+        }
+
+        return "";
+    }
+
+
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return getNode(nums, 0, nums.length - 1);
+
+    }
+
+    private TreeNode getNode(int[] nums, int i, int i1) {
+        if (i > i1) {
+            return null;
+        }
+        int middle = (i1 + i) / 2;
+        TreeNode node = new TreeNode(nums[middle]);
+        node.left = getNode(nums, i, middle - 1);
+        node.right = getNode(nums, middle + 1, i1);
+        return node;
+    }
+
+    public int sumOfLeftLeaves(TreeNode root) {
+        return traverse(root, false);
+    }
+
+    private int traverse(TreeNode root, boolean isLeft) {
+        if (root == null) return 0;
+        if (root.right == null && root.left == null && isLeft)
+            return root.val;
+        return traverse(root.left, true) + traverse(root.right, false);
+    }
+
+    public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+        if (root.left == null && root.right == null) return 1;
+        int temp = Integer.MAX_VALUE;
+        if (root.left != null) {
+            temp = Math.min(minDepth(root.left), temp);
+        }
+        if (root.right != null) {
+            temp = Math.min(minDepth(root.right), temp);
+        }
+        return temp + 1;
+    }
+
+    private int sum(int n) throws InterruptedException {
+        if (n == 1) return 1;
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("leiwenyong1" + n);
+        strings.add("leiwenyong1" + n);
+        return sum(n - 1);
+
+    }
+
+    public String convert(String s, int numRows) {
+        if (numRows == 1) return s;
+        StringBuilder[] arr = new StringBuilder[numRows];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = new StringBuilder();
+        }
+        int mod = numRows * 2 - 2;
+        for (int i = 0; i < s.length(); i++) {
+            int x = i % mod;
+            if (x >= numRows) {
+                arr[mod - x].append(s.charAt(i));
+            } else {
+                arr[x % numRows].append(s.charAt(i));
+            }
+        }
+        StringBuilder res = new StringBuilder();
+        for (StringBuilder stringBuilder : arr) {
+            res.append(stringBuilder);
+        }
+        return res.toString();
     }
 
 
     public static void main(String[] args) throws Exception {
-        String[] arr = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        leetcode leetcode = new leetcode();
+        String s = leetcode.intToRoman(1994);
+        System.out.println(s);
+    }
 
 
+    public String intToRoman(int num) {
+        int[] ii = {1, 5, 10, 50, 100, 500, 1000};
+        char[] ss = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+        char[] str = new char[20];
+        int c = 0;
+        StringBuilder builder = new StringBuilder();
+        for (int i = ii.length - 3; i >= 0; i -= 2) {
+            while (num >= 1000) {
+                str[c++]= ss[i + 2];
+                num = num - 1000;
+            }
+            if (num < ii[i]) continue;
+            if (num / ii[i] == 9) {
+                num = num - ii[i] * 9;
+                str[c++] = ss[i];
+                str[c++] = ss[i + 2];
+                continue;
+            }
+            if (num / ii[i] == 4) {
+                num = num - ii[i] * 4;
+                str[c++] = ss[i];
+                str[c++] = ss[i + 1];
+                continue;
+            }
+            if (num / ii[i] >= 5) {
+                num = num - ii[i + 1];
+                str[c++] = ss[i + 1];
+            }
+            while (num >= ii[i]) {
+                num = num - ii[i];
+                str[c++] = ss[i];
+            }
+        }
+        return new String(str,0,c);
+    }
 
-        System.out.println(arr['a'-97]);
+
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        List<List<Integer>> res = new ArrayList<>();
+        int len = nums.length;
+        if (len < 4) return res;
+        Arrays.sort(nums);
+        for (int i = 0; i < len - 3; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            if ((long) nums[i] + nums[len - 1] + nums[len - 2] + nums[len - 3] < target) continue;
+            if ((long) nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) break;
+            for (int j = i + 1; j < len - 2; j++) {
+                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
+                if ((long) nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) break;
+                if ((long) nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) continue;
+                int left = j + 1;
+                int right = len - 1;
+                while (left < right) {
+                    long temp = nums[i] + nums[j] + nums[left] + nums[right];
+                    if (temp == target) {
+                        res.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
+                        while (left < right && nums[left] == nums[++left]) ;
+                        while (left < right && nums[right] == nums[--right]) ;
+                    } else if (temp < target) {
+                        while (left < right && nums[left] == nums[++left]) ;
+                    } else {
+                        while (left < right && nums[right] == nums[--right]) ;
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        int len = nums.length;
+        if (len < 3) return res;
+        Arrays.sort(nums);
+        for (int i = 0; i < len - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            if (nums[i] > 0) break;
+            if ((nums[i] + nums[len - 1] + nums[len - 2]) < 0) continue;
+            int left = i + 1;
+            int right = len - 1;
+            while (left < right) {
+                int temp = nums[i] + nums[left] + nums[right];
+                if (temp == 0) {
+                    res.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    while (left < right && nums[left] == nums[++left]) ;
+                    while (left < right && nums[right] == nums[--right]) ;
+                } else if (temp < 0) {
+                    while (left < right && nums[left] == nums[++left]) ;
+                } else {
+                    while (left < right && nums[right] == nums[--right]) ;
+                }
+            }
+        }
+        return res;
     }
 
 }

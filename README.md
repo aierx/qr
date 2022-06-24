@@ -61,3 +61,6 @@ mq使用
 
 #### 18、tomcat
 内嵌版tomcat使用
+
+#### HSDB生成动态代理类
+java -classpath 'C:\Program Files\Java\jdk1.8.0_321\lib\*' sun.jvm.hotspot.HSDB

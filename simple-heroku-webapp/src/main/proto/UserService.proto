@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package icu.aierx.services;
+
+service SSR {
+  rpc register(RegisterRequest) returns (RegisterResponse);
+};
+
+message RegisterRequest {
+  string name = 1; // 姓名
+  string tel = 2; // 手机号
+  string email = 3; // 邮箱：可选
+};
+message RegisterResponse {
+  int32 code = 1; // 错误码
+  string err_msg = 2; // 错误信息
+};

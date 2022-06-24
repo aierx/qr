@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+//option java_package = "icu.aierx.proto";
+
+package icu.aierx;
+
+message Test{
+    string  query = 1;
+
+    int32 page_num = 2;
+
+    int32 page_size = 3;
+}

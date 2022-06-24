@@ -19,12 +19,19 @@
         from jpa.db_user
         where user_id = #{userId}
     </delete>
-    <select id="getUserById" resultType="com.aierx.boot.model.po.UserPO">
+    <sql id="base">
         select user_id       as userId,
                user_password as userPassword,
                user_age      as userAge,
                user_name     as userName
+    </sql>
+    <select id="getUserById" resultType="com.aierx.boot.model.po.UserPO">
+        <include refid="base"/>
         from jpa.db_user
         where user_id = #{userId}
+        <if test="userId != null">
+            and user_id = #{userId}
+        </if>
     </select>
 </mapper>
+
