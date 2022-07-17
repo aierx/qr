@@ -1,17 +1,22 @@
 package com.aierx.atx.service;
 
-import com.aierx.atx.model.po.UserPO;
+import com.aierx.atx.model.User;
 
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 
+/**
+ * @author leiwenyong
+ * @since 2022-07-12
+ */
+@Path("/user")
 @Produces("application/json")
 @Consumes("application/json")
 public interface IUserService {
-    @GET()
-    @Path("/user")
-    UserPO getUser();
 
-    @POST
-    @Path("/user")
-    UserPO updateUser(UserPO userPO);
+    @GET
+    @Path("find")
+    User getUser();
 }

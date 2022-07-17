@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+             http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+
+    <jaxrs:server>
+        <jaxrs:serviceBeans>
+            <bean class="com.aierx.atx.service.impl.UserService"/>
+        </jaxrs:serviceBeans>
+<!--        <jaxrs:features>-->
+<!--            <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>-->
+<!--        </jaxrs:features>-->
+        <jaxrs:providers>
+            <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+</beans>

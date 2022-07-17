@@ -4,6 +4,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
 @Configuration
-@ImportResource("classpath:/rs.client.xml")
+@ImportResource({"classpath:/rs.client.xml","classpath:/rs.service.xml"})
 public class CxfConfig {
 }

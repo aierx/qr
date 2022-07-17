@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -27,7 +28,7 @@ public class UserService implements IUserService {
     public List<UserPO> getUser(String id){
         ObjectMapper objectMapper = new ObjectMapper();
         System.out.println("a");
-        return userDao.getUserById(id);
+        return Arrays.asList(new UserPO("adada","adada","asdada","adada"));
     }
 
 
