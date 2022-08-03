@@ -1,14 +1,19 @@
 package com.aierx.atx;
 
-import org.springframework.boot.SpringApplication;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 //@EnableRedisRepositories
+@Slf4j
 public class AtxApp {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(AtxApp.class, args);
+//        ConfigurableApplicationContext run = SpringApplication.run(AtxApp.class, args);
+        log.info("leiwenyong_into");
+        log.debug("leiwenyong_debug");
+        log.trace("leiwenyong_trace");
+        log.error("leiwenyong_error");
+        log.warn("leiwenyong_warn");
     }
 }
