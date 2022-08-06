@@ -22,6 +22,5 @@ public class App {
 		UserDao bean = run.getBean(UserDao.class);
 		PageVO pageVO = new PageVO(2, 2);
 		List<UserVO> userVOS = bean.selectAll(pageVO);
-		System.exit(1);
 	}
 }

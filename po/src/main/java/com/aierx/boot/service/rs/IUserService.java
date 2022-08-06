@@ -3,16 +3,16 @@ package com.aierx.boot.service.rs;
 import com.aierx.boot.model.po.UserPO;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import java.util.List;
 
 @Produces("application/json")
 @Consumes("application/json")
-@Path("/serere")
 public interface IUserService {
     @GET()
     @Path("/user")
-    List<UserPO> getUser(@QueryParam("id")String id);
+    List<UserPO> getUser(@QueryParam("id") @NotNull String id);
 
     @POST
     @Path("/user")

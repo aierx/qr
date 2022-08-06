@@ -8,8 +8,9 @@ import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
-import java.util.Arrays;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Service
@@ -20,17 +21,24 @@ public class UserService implements IUserService {
 
     @Autowired
     OtherService otherService;
+    
+    @Autowired
+    UserService userService;
 
 
     @Override
+    @Validated
     @Transactional
     @SentinelResource("getUser")
     public List<UserPO> getUser(String id){
         ObjectMapper objectMapper = new ObjectMapper();
-        System.out.println("a");
-        return Arrays.asList(new UserPO("adada","adada","asdada","adada"));
+        throw  new IllegalArgumentException("leiwenyong");
+//        return Arrays.asList(new UserPO(null,null,"asdada","adada"));
     }
 
+    public void show(@NotNull String id){
+        System.out.println(id);
+    }
 
     public int UpdateUser(UserPO userPO) throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
