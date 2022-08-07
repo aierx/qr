@@ -1,5 +1,6 @@
 package com.aierx.boot.controller;
 
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +13,7 @@ public class ProducerController {
 //    private KafkaTemplate<String,Object> kafkaTemplate;
 
     @GetMapping("produce")
-    public String send(String msg){
+    public String send(@Validated String msg){
 //        GenericMessage<UserPO> userPOGenericMessage = new GenericMessage<>(new UserPO("asdada", "asdadsad"));
 //        kafkaTemplate.send(userPOGenericMessage);
 //        kafkaTemplate.send("demo",msg);

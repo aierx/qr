@@ -8,26 +8,28 @@
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
-    <bean id="swagger2" class="org.apache.cxf.jaxrs.swagger.Swagger2Feature">
-        <property name="basePath" value="/cxf/swaggerSample"/>
-        <property name="resourcePackage" value="com.aierx.boot"/>
-    </bean>
-    <bean id="cors-filter" class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
     <jaxrs:server id="rs" address="/">
         <jaxrs:serviceBeans>
             <ref bean="userService"/>
         </jaxrs:serviceBeans>
-        <!--    序列化    -->
         <jaxrs:providers>
             <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
-            <ref bean="cors-filter" />
+            <bean class="com.aierx.boot.exception.ValidationExceptionMapper1"/>
+            <bean class="com.aierx.boot.exception.ValidationExceptionMapper"/>
+            <bean class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
         </jaxrs:providers>
-        <!--    参数校验    -->
         <jaxrs:features>
-            <bean class="org.apache.cxf.jaxrs.swagger.Swagger2Feature"/>
             <bean class="org.apache.cxf.validation.BeanValidationFeature"/>
             <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>
-            <ref bean="swagger2"/>
+            <bean id="swagger2" class="org.apache.cxf.jaxrs.swagger.Swagger2Feature">
+                <property name="basePath" value="/cxf/swaggerSample"/>
+                <property name="resourcePackage" value="com.aierx.boot"/>
+            </bean>
         </jaxrs:features>
+        <jaxrs:properties>
+            <entry key="org.apache.cxf.logging.FaultListener">
+                <bean class="com.aierx.boot.exception.ValideLister"/>
+            </entry>
+        </jaxrs:properties>
     </jaxrs:server>
 </beans>

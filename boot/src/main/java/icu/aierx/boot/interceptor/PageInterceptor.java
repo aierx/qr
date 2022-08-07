@@ -10,7 +10,6 @@ import org.apache.ibatis.mapping.ResultMap;
 import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
-import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ import java.util.List;
  * @since 2022-08-03
  */
 @Intercepts(@Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}))
-@Component
+//@Component
 public class PageInterceptor implements Interceptor {
 	@Override
 	public Object intercept(Invocation invocation) throws Throwable {
@@ -103,7 +102,10 @@ public class PageInterceptor implements Interceptor {
 		if (page.getCurPage() == 1) {
 			sqlStr.append(" LIMIT ").append(page.getPageSize());
 		} else {
+			// mysql
 			sqlStr.append(" LIMIT ").append((page.getCurPage() - 1) * page.getPageSize()).append(",").append(page.getPageSize());
+			// pg
+			sqlStr.append(" offset ").append((page.getCurPage() - 1) * page.getPageSize()).append(" limit ").append(page.getPageSize());
 		}
 		return sqlStr.toString();
 	}

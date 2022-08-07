@@ -10,6 +10,7 @@ import java.util.List;
 @Produces("application/json")
 @Consumes("application/json")
 public interface IUserService {
+    
     @GET()
     @Path("/user")
     List<UserPO> getUser(@QueryParam("id") @NotNull String id);
