@@ -14,7 +14,6 @@
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
-            <bean class="com.aierx.boot.exception.ValidationExceptionMapper1"/>
             <bean class="com.aierx.boot.exception.ValidationExceptionMapper"/>
             <bean class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
         </jaxrs:providers>
@@ -29,6 +28,9 @@
         <jaxrs:properties>
             <entry key="org.apache.cxf.logging.FaultListener">
                 <bean class="com.aierx.boot.exception.ValideLister"/>
+            </entry>
+            <entry key="org.apache.cxf.validation.BeanValidationProvider">
+                <ref bean="validatorFactory"/>
             </entry>
         </jaxrs:properties>
     </jaxrs:server>

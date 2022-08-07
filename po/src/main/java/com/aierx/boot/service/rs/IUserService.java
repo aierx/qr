@@ -1,5 +1,6 @@
 package com.aierx.boot.service.rs;
 
+import com.aierx.boot.model.po.CC;
 import com.aierx.boot.model.po.UserPO;
 
 import javax.validation.Valid;
@@ -21,7 +22,7 @@ public interface IUserService {
 
     @POST
     @Path("/update")
-    int UpdateUser(UserPO userPO) throws Exception;
+    int UpdateUser(CC cc) throws Exception;
 
     @POST
     @Path("/dalete")

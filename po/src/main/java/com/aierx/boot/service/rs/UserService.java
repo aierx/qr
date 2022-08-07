@@ -1,6 +1,7 @@
 package com.aierx.boot.service.rs;
 
 import com.aierx.boot.dao.UserDao;
+import com.aierx.boot.model.po.CC;
 import com.aierx.boot.model.po.UserPO;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -107,8 +108,13 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserPO updateUser(UserPO userPO) {
+    public UserPO updateUser( UserPO userPO) {
         return null;
+    }
+    
+    @Override
+    public int UpdateUser(CC c) throws Exception {
+        return 10086;
     }
 }
 
