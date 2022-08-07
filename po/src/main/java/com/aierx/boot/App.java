@@ -7,13 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.ImportResource;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.sql.SQLException;
 
 @SpringBootApplication
 @ImportResource("classpath:/rs.service.xml")
-@EnableTransactionManagement
 @EnableAspectJAutoProxy(exposeProxy = true)
 @SpringBootConfiguration
 @MapperScan( basePackages = {"com.aierx.boot.dao"})

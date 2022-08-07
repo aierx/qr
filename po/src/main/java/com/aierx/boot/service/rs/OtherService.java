@@ -1,11 +1,9 @@
 package com.aierx.boot.service.rs;
 
-import com.aierx.boot.aop.Valid;
 import com.aierx.boot.dao.UserDao;
 import com.aierx.boot.model.po.UserPO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
 /**
@@ -19,8 +17,7 @@ public class OtherService implements IOtherService {
 	@Autowired
 	UserDao userDao;
 	
-	@Transactional(rollbackFor = Exception.class)
-	public void otherFun(@Valid UserPO userPO) {
+	public void otherFun(UserPO userPO) {
 		if (userPO.getUserId().equals("10086")) {
 			return;
 		} else {
