@@ -14,7 +14,7 @@ public interface IUserService {
     
     @GET()
     @Path("/user")
-    List<UserPO> getUser(@QueryParam("id") @NotNull String id);
+    List<UserPO> getUser(@QueryParam("id") @NotNull String id) throws InterruptedException;
 
     @POST
     @Path("/user")

@@ -9,6 +9,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.ImportResource;
 
 import java.sql.SQLException;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 @SpringBootApplication
 @ImportResource("classpath:/rs.service.xml")
@@ -16,10 +19,12 @@ import java.sql.SQLException;
 @SpringBootConfiguration
 @MapperScan( basePackages = {"com.aierx.boot.dao"})
 public class App {
-
+    private int count = 0;
+    private static final int SUM = 10;
+    private Lock lock = new ReentrantLock();
+    private Condition condition = lock.newCondition();
 
     public static void main(String[] args) throws SQLException, InterruptedException {
         ConfigurableApplicationContext run = SpringApplication.run(App.class, args);
-        System.out.println("adsada");
     }
 }

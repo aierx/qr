@@ -1,11 +1,21 @@
 package com.aierx.boot.service.rs;
 
+import com.aierx.boot.config.Lock;
 import com.aierx.boot.dao.UserDao;
 import com.aierx.boot.model.po.CC;
 import com.aierx.boot.model.po.UserPO;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.session.ExecutorType;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.aop.framework.AopContext;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.dao.support.PersistenceExceptionTranslator;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,7 +23,16 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
-public class UserService implements IUserService {
+@Slf4j
+public class UserService implements IUserService, ApplicationContextAware {
+    
+    private final SqlSessionFactory sqlSessionFactory = null;
+    
+    private final ExecutorType executorType = null;
+    
+    private final SqlSession sqlSessionProxy = null;
+    
+    private final PersistenceExceptionTranslator exceptionTranslator = null;
 
     @Autowired
     UserDao userDao;
@@ -23,14 +42,21 @@ public class UserService implements IUserService {
     
     @Autowired
     UserService userService;
-
+    int max = 10000;
+    int min = 100;
+    
+    @Autowired
+    RedisTemplate redisTemplate;
 
     @Override
-//    @Transactional
+    @Transactional
+
 //    @SentinelResource("getUser")
-    public List<UserPO> getUser(String id){
-        ObjectMapper objectMapper = new ObjectMapper();
-        otherService.otherFun(null);
+    @Lock(value = "leiwen",expireTime = 200000L,waitTime = 300000L)
+    public List<UserPO> getUser(String id) throws InterruptedException {
+        log.info("进入锁");
+        Thread.sleep(150000L);
+        log.info("业务结束");
         return Arrays.asList(new UserPO(null,null,"asdada","adada"));
     }
     
@@ -114,6 +140,11 @@ public class UserService implements IUserService {
     @Override
     public int UpdateUser(CC c) throws Exception {
         return 10086;
+    }
+    ApplicationContext applicationContext;
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
     }
 }
 
