@@ -12,11 +12,11 @@ import java.util.List;
 @Consumes("application/json")
 public interface IUserService {
     
-    @GET()
+    @POST()
     @Path("/user")
-    List<UserPO> getUser(@QueryParam("id") @NotNull String id) throws InterruptedException;
+    List<UserPO> getUser(@QueryParam("id") @NotNull String id,UserPO userPO) throws InterruptedException;
 
-    @POST
+//    @POST
     @Path("/user")
     UserPO updateUser(@Valid UserPO userPO);
 

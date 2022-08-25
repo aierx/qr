@@ -1,6 +1,7 @@
 package com.aierx.boot.service.rs;
 
-import com.aierx.boot.config.Lock;
+import com.aierx.boot.A2A;
+import com.aierx.boot.NotifyES;
 import com.aierx.boot.dao.UserDao;
 import com.aierx.boot.model.po.CC;
 import com.aierx.boot.model.po.UserPO;
@@ -38,7 +39,7 @@ public class UserService implements IUserService, ApplicationContextAware {
     UserDao userDao;
 
     @Autowired
-    OtherService otherService;
+    IOtherService otherService;
     
     @Autowired
     UserService userService;
@@ -47,17 +48,17 @@ public class UserService implements IUserService, ApplicationContextAware {
     
     @Autowired
     RedisTemplate redisTemplate;
-
+    
     @Override
-    @Transactional
-
-//    @SentinelResource("getUser")
-    @Lock(value = "leiwen",expireTime = 200000L,waitTime = 300000L)
-    public List<UserPO> getUser(String id) throws InterruptedException {
+//    @Transactional
+    @NotifyES(value = "[1].userName", desc = "", name = "decision")
+    @A2A
+    public List<UserPO> getUser(String id, UserPO userPO) throws InterruptedException {
         log.info("进入锁");
-        Thread.sleep(150000L);
         log.info("业务结束");
-        return Arrays.asList(new UserPO(null,null,"asdada","adada"));
+        UserPO userPO1 = new UserPO("pre", "asdadada", String.valueOf(((int) (Math.random() * ((max - min) + 1)) + min)), "90");
+        otherService.updateData("daaa", userPO1);
+        return Arrays.asList(userPO1);
     }
     
 

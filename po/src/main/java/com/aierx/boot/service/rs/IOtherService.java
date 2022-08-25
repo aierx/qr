@@ -10,4 +10,6 @@ import javax.validation.constraints.NotNull;
  */
 public interface IOtherService {
 	void otherFun(@NotNull UserPO userPO);
+	
+	void updateData(String decisionId,UserPO userPO);
 }
