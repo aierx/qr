@@ -1,6 +1,5 @@
 package com.aierx.boot.service.rs;
 
-import com.aierx.boot.A2A;
 import com.aierx.boot.NotifyES;
 import com.aierx.boot.dao.UserDao;
 import com.aierx.boot.model.po.CC;
@@ -50,9 +49,7 @@ public class UserService implements IUserService, ApplicationContextAware {
     RedisTemplate redisTemplate;
     
     @Override
-//    @Transactional
-    @NotifyES(value = "[1].userName", desc = "", name = "decision")
-    @A2A
+    @NotifyES(value = "[1].a.username", desc = "", name = "decision")
     public List<UserPO> getUser(String id, UserPO userPO) throws InterruptedException {
         log.info("进入锁");
         log.info("业务结束");

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 
 @Data
@@ -17,6 +18,10 @@ public class UserPO  extends CommonPO {
         this.userId = userId;
         this.userAge = userAge;
     }
+    
+    CC a;
+    
+    List<CC> cc;
 
     @NotNull(message = "用户名不能为空")
     private String userName;

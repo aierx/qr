@@ -17,12 +17,12 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 public @interface NotifyES {
 	
 	/**
-	 * 表达式遵循mybatis参数解析规则
-	 * 如果需要获取第一个参数是字符串类型请使用表达 [0]
-	 * 如果需要获取第二个参数是对象请按照如下方式获取属性:
-	 * 普通字段：[1].decisionId
-	 * 普通对象：[1].decisionPoint.decisionPointId
-	 * 列表字段：[1].listDecisionLevel[0].decisionLevelId
+	 * <P>表达式遵循mybatis参数解析规则</P>
+	 * <P>如果需要获取第一个参数是字符串类型请使用表达 [0]</P>
+	 * <P>如果需要获取第二个参数是对象请按照如下方式获取属性:</P>
+	 * <P>普通字段：[1].decisionId</P>
+	 * <P>普通对象：[1].decisionPoint.decisionPointId</P>
+	 * <P>列表字段：[1].listDecisionLevel[0].decisionLevelId</P>
 	 * @return 需要更新的业务Id
 	 */
 	String value() default "";

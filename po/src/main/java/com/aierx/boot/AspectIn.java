@@ -16,7 +16,7 @@ import org.springframework.transaction.support.TransactionSynchronizationAdapter
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 /**
- * 将该代理方法（不知道是不是这样叫）的顺序设置为0，
+ * 将该代理方法的顺序设置为0，
  * 表示最开始执行，这样可以保证大多数情况下能在事务提交之后通知ES
  *
  * @author leiwenyong
@@ -28,8 +28,11 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 @Order(0)
 public class AspectIn {
 	
+	private final Configuration configuration = new Configuration();
+	
 	/**
-	 * 此处使用环绕代理为了获取传入时的参数，使用After获取到参数可能会被业务代码修改
+	 * <p>此处使用环绕代理为了获取传入时的参数，因为使用After获取到参数可能会被业务代码修改</p>
+	 * <p>是否有其他方法拿到参数？</p>
 	 *
 	 * @param joinPoint spring提供的代理方法的一些属性
 	 * @return 业务代码返回值
@@ -41,7 +44,6 @@ public class AspectIn {
 		MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 		//1.获取目标方法上的目标注解
 		NotifyES annotation = AnnotationUtils.findAnnotation(signature.getMethod(), NotifyES.class);
-		Configuration configuration = new Configuration();
 		// 2.获取要更新数据的唯一ID，提前获取需要通知的数据Id，防止后续代码执行过程中修改该数据
 		MetaObject metaObject = configuration.newMetaObject(args);
 		Object param = metaObject.getValue(annotation.value());
