@@ -1,0 +1,315 @@
+POST /twitter/_doc/4
+{
+  "user":"GB",
+  "uid":1,
+  "city":"Beijing",
+  "province":"Beijing",
+  "country":"China"
+}
+
+POST /user/_doc/1
+{
+  "username": "leiwenyong111"
+}
+
+POST /user/_mapping
+{
+  "properties":{
+    "username":{
+      "type":"text",
+      "index":true,
+      "store":false
+    }
+  }
+
+}
+
+PUT /leiwenyong
+{
+  "settings": {},
+  "mappings": {
+    "properties": {
+      "name": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+POST /leiwenyong/_update/3
+{
+  "doc":{
+    "age":40
+  }
+}
+POST /leiwenyong/_doc/3
+{
+  "username":"leiwenyong",
+  "age":30
+}
+
+POST /leiwenyong/_delete_by_query
+{
+  "query":{
+   "match_all": {
+     "username":"leiwenyong"
+   }
+  }
+}
+
+POST /leiwenyong/_delete_by_query
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+PUT /my_index01/_doc/1
+{
+	  "name":"zs",
+    "sex": 1,
+    "age": 24,
+    "hobby": "篮球"
+}
+PUT /my_index01/_doc/2
+{
+	  "name":"ls",
+    "sex": 0,
+    "age": 25,
+    "hobby": "足球"
+}
+PUT /my_index01/_doc/3
+{
+	  "name":"ww",
+    "sex": 0,
+    "age": 26,
+    "hobby": "足球"
+}
+PUT /my_index01/_doc/4
+{
+	  "name":"zl",
+    "sex": 0,
+    "age": 24,
+    "hobby": "乒乓球"
+}
+PUT /my_index01/_doc/5
+{
+	  "name":"zq",
+    "sex": 0,
+    "age": 18,
+    "hobby": "羽毛球"
+}
+
+
+
+GET /my_index01/_doc/_search
+
+GET /my_index01/_doc/_search?q=name:ww
+
+GET /my_index01/_doc/_search?q=age[24 TO 26]
+
+GET /my_index01/_doc/_mget
+{
+  "ids": ["1", "2"]
+}
+
+GET /my_index01/_search?_source=name,age&q=age:>18&from=0&size=4&sort=age
+
+
+POST /_sql?format=csv
+{
+  "query": """
+  SELECT * FROM my_index01
+  """,
+  "filter":{
+    "range": {
+      "age": {
+        "gte": 25
+      }
+    }
+  }
+}
+
+POST /my_index01/_search
+{
+  "size": 0
+  , "query": {
+    "match": {
+      "age": 24
+    }
+  },
+  "aggs": {
+    "group_age": {
+      "terms": {
+        "field": "age"
+      }
+    }
+  }
+}
+
+POST /atx_bak/_doc/3
+{
+  "id":1,
+	"level1":[
+		{
+			"name":"长沙",
+			"code":"COSDT"
+		},
+		{
+			"name":"湖南",
+			"code":"RSDT"
+		},
+		{
+			"name":"中国",
+			"code":"CSDT",
+			"user":[
+			  {
+			    "name":"leiwenyong",
+			    "sex":1
+			  },
+			  {
+			    "name":"zuotian",
+			    "sex":0
+			  }
+			 ]
+		}
+	]
+}
+
+GET /atx_bak/_mapping
+
+
+POST  _reindex
+{
+  "dest": {"index": "atx_2"},
+  "source": {"index":"atx_bak"}
+}
+
+GET /atx_2/_search
+
+
+GET /atx_2/_search
+{
+  "query": {
+    "nested": {
+      "path": "level1.user",
+      "query": {
+            "bool": {
+              "must": [
+                {"match": {"level1.user.name": "leiwenyong"}},
+                {"match": {"level1.user.name": "0"}}
+              ]
+            }
+      }
+    }
+  }
+}
+
+
+PUT /atx/_mapping
+
+
+PUT /atx/_mapping
+{
+  "properties":{
+    "level" : {
+      "type":"nested"
+    }
+  }
+}
+
+
+GET /atx/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "level": "{}"
+          }
+        },
+        {
+          "match": {
+            "level.name": "长沙"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET _cat/indices?v
+
+GET atx
+
+
+
+
+GET /atx_bak/_search
+{
+  "query": {
+    "nested": {
+      "path": "level",
+      "query": {
+       "bool": {
+        "must": [
+          {
+            "match": {
+              "level.name": "长沙"
+            }
+          }
+        ]
+      }
+      }
+    }
+  }
+}
+
+
+POST /_sql?format=json
+{
+  "query": """
+  SELECT * FROM atx where id=1
+  """
+}
+
+ GET _sql/translate
+{
+  "query":"SELECT * FROM atx where id=1"
+}
+
+Get /atx/_search
+{
+  "size" : 1000,
+  "query" : {
+    "term" : {
+      "id" : {
+        "value" : 1,
+        "boost" : 1.0
+      }
+    }
+  },
+  "_source" : {
+    "includes" : [
+      "id",
+      "level1.code",
+      "level1.name"
+    ],
+    "excludes" : [ ]
+  },
+  "sort" : [
+    {
+      "_doc" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
+
+Get /atx_bak/_search
+
+DELETE /atx
+
+GET /atx_bak/_count
