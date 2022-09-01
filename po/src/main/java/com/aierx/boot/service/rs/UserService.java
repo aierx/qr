@@ -1,6 +1,5 @@
 package com.aierx.boot.service.rs;
 
-import com.aierx.boot.NotifyES;
 import com.aierx.boot.dao.UserDao;
 import com.aierx.boot.model.po.CC;
 import com.aierx.boot.model.po.UserPO;
@@ -18,12 +17,14 @@ import org.springframework.dao.support.PersistenceExceptionTranslator;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Service
 @Slf4j
+@Validated
 public class UserService implements IUserService, ApplicationContextAware {
     
     private final SqlSessionFactory sqlSessionFactory = null;
@@ -40,8 +41,6 @@ public class UserService implements IUserService, ApplicationContextAware {
     @Autowired
     IOtherService otherService;
     
-    @Autowired
-    UserService userService;
     int max = 10000;
     int min = 100;
     
@@ -49,12 +48,12 @@ public class UserService implements IUserService, ApplicationContextAware {
     RedisTemplate redisTemplate;
     
     @Override
-    @NotifyES(value = "[1].a.username", desc = "", name = "decision")
-    public List<UserPO> getUser(String id, UserPO userPO) throws InterruptedException {
+//    @NotifyES(value = "[1].a.username", desc = "", name = "decision")
+    public List<UserPO> getUser( String id,@Validated({FunctionalInterface.class})  UserPO userPO) throws InterruptedException {
         log.info("进入锁");
         log.info("业务结束");
         UserPO userPO1 = new UserPO("pre", "asdadada", String.valueOf(((int) (Math.random() * ((max - min) + 1)) + min)), "90");
-        otherService.updateData("daaa", userPO1);
+//        otherService.updateData("daaa", userPO1);
         return Arrays.asList(userPO1);
     }
     
@@ -103,7 +102,7 @@ public class UserService implements IUserService, ApplicationContextAware {
     }
 
     @Transactional
-    @Override
+//    @Override
     public void otherFun4(UserPO userPO){
         userPO.setUserName("自己注入自己");
         userDao.updateUserById(userPO);
@@ -118,24 +117,24 @@ public class UserService implements IUserService, ApplicationContextAware {
 
 
 
-    @Override
+//    @Override
     public int deleteUser(UserPO userPO) {
         return userDao.deleteUserById(userPO.getUserId());
     }
 
 
 
-    @Override
+//    @Override
     public int insertUser(UserPO userPO) {
         return userDao.insertUser(userPO);
     }
 
-    @Override
-    public UserPO updateUser( UserPO userPO) {
-        return null;
-    }
+//    @Override
+//    public UserPO updateUser( UserPO userPO) {
+//        return null;
+//    }
     
-    @Override
+//    @Override
     public int UpdateUser(CC c) throws Exception {
         return 10086;
     }

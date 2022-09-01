@@ -12,6 +12,9 @@
         <jaxrs:serviceBeans>
             <ref bean="userService"/>
         </jaxrs:serviceBeans>
+        <jaxrs:inInterceptors>
+<!--            <bean class="com.aierx.boot.BeanValidationInInterceptor"/>-->
+        </jaxrs:inInterceptors>
         <jaxrs:providers>
             <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
             <bean class="com.aierx.boot.exception.ValidationExceptionMapper"/>
@@ -29,9 +32,9 @@
             <entry key="org.apache.cxf.logging.FaultListener">
                 <bean class="com.aierx.boot.exception.ValideLister"/>
             </entry>
-            <entry key="org.apache.cxf.validation.BeanValidationProvider">
-                <ref bean="validatorFactory"/>
-            </entry>
+<!--            <entry key="org.apache.cxf.validation.BeanValidationProvider">-->
+<!--                <ref bean="validatorFactory"/>-->
+<!--            </entry>-->
         </jaxrs:properties>
     </jaxrs:server>
 </beans>
