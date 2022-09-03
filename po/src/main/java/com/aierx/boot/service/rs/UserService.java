@@ -24,7 +24,6 @@ import java.util.List;
 
 @Service
 @Slf4j
-@Validated
 public class UserService implements IUserService, ApplicationContextAware {
     
     private final SqlSessionFactory sqlSessionFactory = null;
@@ -49,7 +48,7 @@ public class UserService implements IUserService, ApplicationContextAware {
     
     @Override
 //    @NotifyES(value = "[1].a.username", desc = "", name = "decision")
-    public List<UserPO> getUser( String id,@Validated({FunctionalInterface.class})  UserPO userPO) throws InterruptedException {
+    public List<UserPO> getUser( String id, @Validated({FunctionalInterface.class})  UserPO userPO) throws InterruptedException {
         log.info("进入锁");
         log.info("业务结束");
         UserPO userPO1 = new UserPO("pre", "asdadada", String.valueOf(((int) (Math.random() * ((max - min) + 1)) + min)), "90");

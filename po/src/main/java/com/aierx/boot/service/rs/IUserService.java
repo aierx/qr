@@ -1,20 +1,20 @@
 package com.aierx.boot.service.rs;
 
 import com.aierx.boot.model.po.UserPO;
-import org.springframework.validation.annotation.Validated;
 
-import javax.validation.constraints.NotBlank;
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import java.util.List;
 
 @Produces("application/json")
 @Consumes("application/json")
-@Validated
 public interface IUserService {
 	
 	@POST()
 	@Path("/user")
-	List<UserPO> getUser(@QueryParam("id") @NotBlank(message = "不能为空")  String id, @Validated({FunctionalInterface.class}) UserPO userPO) throws InterruptedException;
+	List<UserPO> getUser(String id, UserPO userPO) throws InterruptedException;
 
 //    @POST
 //    @Path("/user")
