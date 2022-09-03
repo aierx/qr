@@ -8,29 +8,25 @@
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
+    <bean class="icu.aierx.po.exception.ValidationExceptionMapper"/>
     <jaxrs:server id="rs" address="/">
         <jaxrs:serviceBeans>
             <ref bean="userService"/>
         </jaxrs:serviceBeans>
         <jaxrs:inInterceptors>
-<!--            <bean class="com.aierx.boot.BeanValidationInInterceptor"/>-->
+<!--            <bean class="BeanValidationInInterceptor"/>-->
         </jaxrs:inInterceptors>
         <jaxrs:providers>
-            <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider"/>
-            <bean class="com.aierx.boot.exception.ValidationExceptionMapper"/>
-            <bean class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
+            <bean class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider" name="jsonProvider"/>
+            <bean class="icu.aierx.po.exception.ValidationExceptionMapper"/>
         </jaxrs:providers>
         <jaxrs:features>
 <!--            <bean class="org.apache.cxf.validation.BeanValidationFeature"/>-->
             <bean class="org.apache.cxf.ext.logging.LoggingFeature"/>
-            <bean id="swagger2" class="org.apache.cxf.jaxrs.swagger.Swagger2Feature">
-                <property name="basePath" value="/cxf/swaggerSample"/>
-                <property name="resourcePackage" value="com.aierx.boot"/>
-            </bean>
         </jaxrs:features>
         <jaxrs:properties>
             <entry key="org.apache.cxf.logging.FaultListener">
-                <bean class="com.aierx.boot.exception.ValideLister"/>
+                <bean class="icu.aierx.po.exception.ValideLister"/>
             </entry>
 <!--            <entry key="org.apache.cxf.validation.BeanValidationProvider">-->
 <!--                <ref bean="validatorFactory"/>-->

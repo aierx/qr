@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.aierx.boot.dao.UserDao">
+<mapper namespace="icu.aierx.po.dao.UserDao">
     <insert id="insertUser">
         insert into jpa.db_user (user_id, user_age, user_name, user_password)
         VALUES (#{userId}, #{userAge}, #{userName}, #{userPassword})
@@ -25,7 +25,7 @@
                user_age      as userAge,
                user_name     as userName
     </sql>
-    <select id="getUserById" resultType="com.aierx.boot.model.po.UserPO">
+    <select id="getUserById" resultType="icu.aierx.po.model.po.UserPO">
         <include refid="base"/>
         from jpa.db_user
         where user_id = #{userId}
