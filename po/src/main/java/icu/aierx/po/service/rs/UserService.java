@@ -2,7 +2,6 @@ package icu.aierx.po.service.rs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import icu.aierx.po.dao.UserDao;
-import icu.aierx.po.model.po.CC;
 import icu.aierx.po.model.po.UserPO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.ExecutorType;
@@ -114,30 +113,6 @@ public class UserService implements IUserService, ApplicationContextAware {
 //        userDao.updateUserById(userPO);
     }
 
-
-
-
-////    @Override
-//    public int deleteUser(UserPO userPO) {
-//        return userDao.deleteUserById(userPO.getUserId());
-//    }
-//
-//
-//
-////    @Override
-//    public int insertUser(UserPO userPO) {
-//        return userDao.insertUser(userPO);
-//    }
-
-//    @Override
-//    public UserPO updateUser( UserPO userPO) {
-//        return null;
-//    }
-    
-//    @Override
-    public int UpdateUser(CC c) throws Exception {
-        return 10086;
-    }
     ApplicationContext applicationContext;
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {

@@ -1,6 +1,6 @@
 package icu.aierx.po.service.rs;
 
-import icu.aierx.po.NotifyES;
+import icu.aierx.po.aop.NotifyES;
 import icu.aierx.po.model.po.UserPO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

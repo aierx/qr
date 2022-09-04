@@ -1,18 +1,15 @@
 package icu.aierx.po.model.po;
 
-import icu.aierx.po.common.CommonPO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 
 @Data
 @NoArgsConstructor
-public class UserPO  extends CommonPO {
+public class UserPO {
     
     public interface Second{}
     
@@ -24,12 +21,6 @@ public class UserPO  extends CommonPO {
         this.userId = userId;
         this.userAge = userAge;
     }
-    
-    @Valid
-    @NotNull
-    CC a;
-    
-    List<CC> cc;
 
     @NotBlank(message = "用户名不能为空",groups = {FunctionalInterface.class})
     private String userName;

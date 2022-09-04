@@ -1,4 +1,4 @@
-package icu.aierx.po;
+package icu.aierx.po.aop;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +37,7 @@ public class AspectIn {
 	 * @param joinPoint spring提供的代理方法的一些属性
 	 * @return 业务代码返回值
 	 */
-	@Around(value = "icu.aierx.po.AspectIn.pointCut()")
+	@Around(value = "icu.aierx.po.aop.AspectIn.pointCut()")
 	@SneakyThrows
 	public Object app(ProceedingJoinPoint joinPoint) {
 		Object[] args = joinPoint.getArgs();
@@ -76,7 +76,7 @@ public class AspectIn {
 		return obj;
 	}
 	
-	@Pointcut(value = "@annotation(icu.aierx.po.NotifyES)")
+	@Pointcut(value = "@annotation(icu.aierx.po.aop.NotifyES)")
 	public void pointCut(){
 	
 	}
