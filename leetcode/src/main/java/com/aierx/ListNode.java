@@ -1,7 +1,10 @@
 package com.aierx;
 
 public class ListNode {
-      int val;
-     ListNode next;
-     ListNode(int x) { val = x; }
-  }
+	int val;
+	public ListNode next;
+	
+	public ListNode(int x) {
+		val = x;
+	}
+}

@@ -12,9 +12,11 @@ import javax.validation.constraints.NotNull;
 @Data
 public class UserVO {
 	
-	@NotNull(message = "id is not null")
 	private Integer id;
 	
 	@NotBlank(message = "user is not null")
 	private String username;
+	
+	@NotBlank(message = "密码不能为空")
+	private String password;
 }
