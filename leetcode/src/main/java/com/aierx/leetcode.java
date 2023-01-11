@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import java.util.*;
 
+import static java.util.Comparator.*;
+
 public class leetcode {
 	
 	
@@ -76,7 +78,7 @@ public class leetcode {
 		for (char aChar : chars) {
 			list.add(aChar - 48);
 		}
-		list.sort(Comparator.comparingInt(o -> o));
+		list.sort(comparingInt(o -> o));
 		int res = 0;
 		res += list.get(0) * 10;
 		res += list.get(1) * 10;
@@ -423,7 +425,7 @@ public class leetcode {
 		for (int num : nums) {
 			integers.add(num);
 		}
-		integers.sort(Comparator.comparingInt(o -> o));
+		integers.sort(comparingInt(o -> o));
 		int min = integers.get(0) * integers.get(1);
 		int max = integers.get(integers.size() - 1) * integers.get(integers.size() - 2);
 		return max - min;
@@ -439,8 +441,8 @@ public class leetcode {
 		for (int num : students) {
 			studentsList.add(num);
 		}
-		seatsList.sort(Comparator.comparingInt(o -> o));
-		studentsList.sort(Comparator.comparingInt(o -> o));
+		seatsList.sort(comparingInt(o -> o));
+		studentsList.sort(comparingInt(o -> o));
 		
 		
 		int res = 0;
@@ -511,7 +513,7 @@ public class leetcode {
 		for (int i : nums) {
 			integers.add(i);
 		}
-		integers.sort(Comparator.comparingInt(o -> o));
+		integers.sort(comparingInt(o -> o));
 		List<Integer> res = new ArrayList<>();
 		for (int i = 0; i < integers.size(); i++) {
 			if (integers.get(i) > target) break;
@@ -1650,7 +1652,6 @@ public class leetcode {
 		return true;
 	}
 	
-
 	
 	public static int maxProfit(int[] prices) {
 		int max = Integer.MIN_VALUE;
@@ -1693,19 +1694,16 @@ public class leetcode {
 		return digits;
 	}
 	
-	public static void main(String[] args) throws Exception {
-		addBinary("110","1");
-	}
 	
 	public static String addBinary(String a, String b) {
 		int i = a.length() > b.length() ? a.length() + 1 : b.length() + 1;
 		boolean flag = false;
 		StringBuilder builder = new StringBuilder();
 		for (int i1 = 0; i1 < i; i1++) {
-			if (i1 > a.length() -1 || i1 > b.length() -1) {
+			if (i1 > a.length() - 1 || i1 > b.length() - 1) {
 				String s1 = a.length() > b.length() ? a : b;
 				while (i1 < s1.length()) {
-					if (flag){
+					if (flag) {
 						builder.append(s1.charAt(i1));
 					}
 					i1++;
@@ -1738,5 +1736,223 @@ public class leetcode {
 		return builder.reverse().toString();
 	}
 	
+	public ListNode mergeKLists(ListNode[] lists) {
+		if (lists == null || lists.length == 0) return new ListNode();
+		if (lists.length == 1) return lists[0];
+		ListNode root = lists[0];
+		for (int i = 1; i < lists.length; i++) {
+			root = merge(root, lists[i]);
+		}
+		return root;
+	}
+	
+	private ListNode merge(ListNode list, ListNode list1) {
+		if (list == null || list1 == null) {
+			return list == null ? list1 : list;
+		}
+		ListNode head = new ListNode();
+		head.next = list;
+		ListNode root = head;
+		while (list != null && list1 != null) {
+			if (list.val < list1.val) {
+				list = list.next;
+				head = head.next;
+			} else {
+				ListNode tmp = list1;
+				list1 = list1.next;
+				head.next = tmp;
+				tmp.next = list;
+				head = tmp;
+			}
+		}
+		if (list1 != null) {
+			head.next = list1;
+		}
+		return root.next;
+	}
+	
+	
+	public static class ListNode {
+		int val;
+		ListNode next;
+		
+		ListNode() {
+		}
+		
+		ListNode(int val) {
+			this.val = val;
+		}
+		
+		ListNode(int val, ListNode next) {
+			this.val = val;
+			this.next = next;
+		}
+	}
+	
+	
+	private static boolean[][] line = new boolean[9][9];
+	private static boolean[][] column = new boolean[9][9];
+	private static boolean[][][] block = new boolean[3][3][9];
+	private static boolean valid = false;
+	private static List<int[]> spaces = new ArrayList<>();//记录每一个空的位置
+	
+	public static void solveSudoku(char[][] board) {
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				//为空
+				if (board[i][j] == '.') {
+					spaces.add(new int[]{i, j});//例如第二行第三列为空，存入[1,2]
+				} else {
+					int digit = board[i][j] - '0' - 1;//转换为整型，方便计算; -1 是为了与数组中的位置对应
+					line[i][digit] = true; //记录第i行中有数字的位置
+					column[j][digit] = true; //记录第i列中有数字的位置
+					block[i / 3][j / 3][digit] = true; //记录元素所处的3×3子块中有数字的位置
+				}
+			}
+		}
+		sudoku(board, 0);
+	}
+	
+	private static void sudoku(char[][] board, int pos) {
+		//Terminal Condition -- 给每个为空的点都附上了值
+		if (pos == spaces.size()) {
+			valid = true;
+			return;
+		}
+		
+		//取出第pos个为空的位置
+		int[] point = spaces.get(pos);
+		int i = point[0];
+		int j = point[1];
+		
+		for (int digit = 0; digit < 9 && !valid; digit++) {
+			//元素所在的行，列，子块中都没有这个数
+			if (!line[i][digit] && !column[j][digit] && !block[i / 3][j / 3][digit]) {
+				board[i][j] = (char) (digit + '0' + 1);//给这个数赋值
+				line[i][digit] = column[j][digit] = block[i / 3][j / 3][digit] = true;//并设为不为空
+				sudoku(board, pos + 1);//递归，考虑下一空节点
+				line[i][digit] = column[j][digit] = block[i / 3][j / 3][digit] = false;//回退之后，复原
+			}
+		}
+	}
+	
+	private static boolean ju(char[][] board, int i, int j, int k) {
+		boolean flag = false;
+		for (int l = 0; l < 9; l++) {
+			// 判断竖排
+			if (board[l][j] == (char) (k + 48)) flag = true;
+			// 判断横排
+			if (board[i][l] == (char) (k + 48)) flag = true;
+			if (flag) break;
+		}
+		// 判断单元格
+		for (int r = i / 3 * 3; r < i / 3 * 3 + 3; r++) {
+			for (int c = j / 3 * 3; c < j / 3 * 3 + 3; c++) {
+				if (board[r][c] == (char) (k + 48)) {
+					flag = true;
+					break;
+				}
+			}
+		}
+		return flag;
+	}
+	
+	public double myPow(double x, int n) {
+		if (x == 1) {
+			return 1;
+		}
+		if (n < 0) {
+			return 1 / rec(x, -n);
+		} else {
+			return rec(x, n);
+		}
+	}
+	
+	double rec(double x, int n) {
+		double rex = 1;
+		while (n > 0) {
+			rex *= x;
+			n--;
+		}
+		return rex;
+	}
+	
+	public static void main(String[] args) throws Exception {
+		leetcode leetcode = new leetcode();
+		leetcode.combinationSum(new int[]{2, 3, 5}, 8);
+	}
+	
+	static
+	
+	public List<List<Integer>> combinationSum(int[] candidates, int target) {
+		List<List<Integer>> data = new ArrayList<>();
+		ArrayList<Integer> list = new ArrayList<>();
+		for (int i = 0; i < candidates.length; i++) {
+			list.add(candidates[i]);
+		}
+		list.sort((o1, o2) -> o1 - o2);
+		for (int i = 0; i < list.size(); i++) {
+			recursion(list, i, target, new Stack<>(), data, true);
+		}
+		return data;
+	}
+	
+	private static void recursion(List<Integer> arr, int n, int target, Stack<Integer> res, List<List<Integer>> data,
+								  Boolean flag) {
+		int i = flag ? 1 : 0;
+		if (n >= arr.size()) return;
+		while (arr.get(n) * i <= target) {
+			for (int j = 0; j < i; j++)
+				res.add(arr.get(n));
+			if (arr.get(n) * i == target) {
+				List<Integer> tmp = new ArrayList<>();
+				Object[] array = res.toArray();
+				for (Object o : array) {
+					tmp.add((Integer) o);
+				}
+				data.add(tmp);
+			}
+			target = target - arr.get(n) * i;
+			if (target > arr.get(n))
+				recursion(arr, n + 1, target, res, data, false);
+			target = target + arr.get(n) * i;
+			for (int j = 0; j < i; j++)
+				res.pop();
+			i++;
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

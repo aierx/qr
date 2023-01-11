@@ -3,9 +3,7 @@ package icu.aierx.boot.dao;
 import icu.aierx.boot.model.AtxPage;
 import icu.aierx.boot.model.PageVO;
 import icu.aierx.boot.model.UserVO;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -17,13 +15,10 @@ import java.util.List;
 @Repository
 public interface UserDao {
 	
-	@Select("select  * from db_user")
 	@AtxPage
 	List<UserVO> selectAll(PageVO pageVO);
 	
-	@Insert("insert into db_user (username,password) values(#{username},#{password})")
 	int insert(UserVO userVO);
 	
-	@Select("select * from db_user where username = #{username}")
-	UserVO queryByUserName(@Param("username") String username);
+	UserVO queryByUserName( String username);
 }
